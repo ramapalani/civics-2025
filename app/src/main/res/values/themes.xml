@@ -1,0 +1,6 @@
+<resources>
+    <style name="Theme.Civics2025" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">#FF1B365D</item>
+        <item name="android:navigationBarColor">#FFF6F1E8</item>
+    </style>
+</resources>

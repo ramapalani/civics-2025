@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Civics 2025</string>
+    <string name="daily_channel_name">Daily civics question</string>
+    <string name="daily_channel_desc">One practice question each day, weighted toward missed answers</string>
+</resources>

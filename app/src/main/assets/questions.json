@@ -1,0 +1,3609 @@
+[
+  {
+    "id": 1,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Principles of American Government",
+    "question": "What is the form of government of the United States?",
+    "acceptedAnswers": [
+      "Republic",
+      "Constitution-based federal republic",
+      "Representative democracy",
+      "Constitutional republic",
+      "Federal republic"
+    ],
+    "extraInfo": "The United States is a constitution-based federal republic. The people elect representatives, and the Constitution limits government power.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 1,
+    "studyGuideTitle": "The U.S. Constitution",
+    "studyGuidePage": 8,
+    "officialAnswers": [
+      "Republic",
+      "Constitution-based federal republic",
+      "Representative democracy"
+    ]
+  },
+  {
+    "id": 2,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Principles of American Government",
+    "question": "What is the supreme law of the land?",
+    "acceptedAnswers": [
+      "The Constitution",
+      "U.S. Constitution",
+      "US Constitution",
+      "United States Constitution",
+      "Constitution"
+    ],
+    "extraInfo": "Article VI makes the Constitution the supreme law. Federal and state laws must follow it.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 1,
+    "studyGuideTitle": "The U.S. Constitution",
+    "studyGuidePage": 8,
+    "officialAnswers": [
+      "(U.S.) Constitution"
+    ]
+  },
+  {
+    "id": 3,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Principles of American Government",
+    "question": "Name one thing the U.S. Constitution does.",
+    "acceptedAnswers": [
+      "Forms the government",
+      "Defines powers of government",
+      "Defines the parts of government",
+      "Protects the rights of the people"
+    ],
+    "extraInfo": "The Constitution creates the federal government, divides its powers, and protects individual rights.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 1,
+    "studyGuideTitle": "The U.S. Constitution",
+    "studyGuidePage": 8,
+    "officialAnswers": [
+      "Forms the government",
+      "Defines powers of government",
+      "Defines the parts of government",
+      "Protects the rights of the people"
+    ]
+  },
+  {
+    "id": 4,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Principles of American Government",
+    "question": "The U.S. Constitution starts with the words “We the People.” What does “We the People” mean?",
+    "acceptedAnswers": [
+      "Self-government",
+      "Popular sovereignty",
+      "Consent of the governed",
+      "People should govern themselves",
+      "Social contract",
+      "Example of social contract"
+    ],
+    "extraInfo": "“We the People” means the government’s power comes from the people, not a king.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 1,
+    "studyGuideTitle": "The U.S. Constitution",
+    "studyGuidePage": 8,
+    "officialAnswers": [
+      "Self-government",
+      "Popular sovereignty",
+      "Consent of the governed",
+      "People should govern themselves",
+      "(Example of) social contract"
+    ]
+  },
+  {
+    "id": 5,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Principles of American Government",
+    "question": "How are changes made to the U.S. Constitution?",
+    "acceptedAnswers": [
+      "Amendments",
+      "The amendment process",
+      "Amendment process"
+    ],
+    "extraInfo": "Article V lets Congress and the states amend the Constitution. There are 27 amendments.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 1,
+    "studyGuideTitle": "The U.S. Constitution",
+    "studyGuidePage": 8,
+    "officialAnswers": [
+      "Amendments",
+      "The amendment process"
+    ]
+  },
+  {
+    "id": 6,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Principles of American Government",
+    "question": "What does the Bill of Rights protect?",
+    "acceptedAnswers": [
+      "The basic rights of Americans",
+      "Basic rights of Americans",
+      "The basic rights of people living in the United States",
+      "Basic rights of people living in the United States",
+      "Rights of Americans"
+    ],
+    "extraInfo": "The first ten amendments are the Bill of Rights. They protect freedoms such as speech, religion, and due process.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 1,
+    "studyGuideTitle": "The U.S. Constitution",
+    "studyGuidePage": 8,
+    "officialAnswers": [
+      "(The basic) rights of Americans",
+      "(The basic) rights of people living in the United States"
+    ]
+  },
+  {
+    "id": 7,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Principles of American Government",
+    "question": "How many amendments does the U.S. Constitution have?",
+    "acceptedAnswers": [
+      "Twenty-seven",
+      "27",
+      "Twenty seven",
+      "Twenty-seven (27)"
+    ],
+    "extraInfo": "There are 27 amendments. The first ten are the Bill of Rights (1791); the 27th was ratified in 1992.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 1,
+    "studyGuideTitle": "The U.S. Constitution",
+    "studyGuidePage": 8,
+    "officialAnswers": [
+      "Twenty-seven (27)"
+    ]
+  },
+  {
+    "id": 8,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Principles of American Government",
+    "question": "Why is the Declaration of Independence important?",
+    "acceptedAnswers": [
+      "It says America is free from British control",
+      "It says all people are created equal",
+      "It identifies inherent rights",
+      "It identifies individual freedoms"
+    ],
+    "extraInfo": "Adopted July 4, 1776, it announced independence and the idea that people have inherent rights.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 1,
+    "studyGuideTitle": "The U.S. Constitution",
+    "studyGuidePage": 8,
+    "officialAnswers": [
+      "It says America is free from British control.",
+      "It says all people are created equal.",
+      "It identifies inherent rights.",
+      "It identifies individual freedoms."
+    ]
+  },
+  {
+    "id": 9,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Principles of American Government",
+    "question": "What founding document said the American colonies were free from Britain?",
+    "acceptedAnswers": [
+      "Declaration of Independence",
+      "The Declaration of Independence"
+    ],
+    "extraInfo": "The Declaration of Independence told the world the colonies were free from British rule.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 1,
+    "studyGuideTitle": "The U.S. Constitution",
+    "studyGuidePage": 8,
+    "officialAnswers": [
+      "Declaration of Independence"
+    ]
+  },
+  {
+    "id": 10,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Principles of American Government",
+    "question": "Name two important ideas from the Declaration of Independence and the U.S. Constitution.",
+    "acceptedAnswers": [
+      "Equality",
+      "Liberty",
+      "Social contract",
+      "Natural rights",
+      "Limited government",
+      "Self-government"
+    ],
+    "extraInfo": "Both documents rest on liberty, equality, natural rights, and government by consent.",
+    "starred6520": false,
+    "answerKind": "all_n",
+    "minRequired": 2,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 1,
+    "studyGuideTitle": "The U.S. Constitution",
+    "studyGuidePage": 8,
+    "officialAnswers": [
+      "Equality",
+      "Liberty",
+      "Social contract",
+      "Natural rights",
+      "Limited government",
+      "Self-government"
+    ]
+  },
+  {
+    "id": 11,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Principles of American Government",
+    "question": "The words “Life, Liberty, and the pursuit of Happiness” are in what founding document?",
+    "acceptedAnswers": [
+      "Declaration of Independence",
+      "The Declaration of Independence"
+    ],
+    "extraInfo": "Jefferson wrote that people have unalienable rights, including life, liberty, and the pursuit of happiness.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 1,
+    "studyGuideTitle": "The U.S. Constitution",
+    "studyGuidePage": 8,
+    "officialAnswers": [
+      "Declaration of Independence"
+    ]
+  },
+  {
+    "id": 12,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Principles of American Government",
+    "question": "What is the economic system of the United States?",
+    "acceptedAnswers": [
+      "Capitalism",
+      "Free market economy",
+      "Capitalist economy",
+      "Market economy"
+    ],
+    "extraInfo": "The U.S. has a capitalist, free-market economy: private property, competition, and limited government control.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 1,
+    "studyGuideTitle": "The U.S. Constitution",
+    "studyGuidePage": 8,
+    "officialAnswers": [
+      "Capitalism",
+      "Free market economy"
+    ]
+  },
+  {
+    "id": 13,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Principles of American Government",
+    "question": "What is the rule of law?",
+    "acceptedAnswers": [
+      "Everyone must follow the law",
+      "Leaders must obey the law",
+      "Government must obey the law",
+      "No one is above the law"
+    ],
+    "extraInfo": "Rule of law means the same laws apply to leaders and citizens. No one is above the law.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 1,
+    "studyGuideTitle": "The U.S. Constitution",
+    "studyGuidePage": 8,
+    "officialAnswers": [
+      "Everyone must follow the law.",
+      "Leaders must obey the law.",
+      "Government must obey the law.",
+      "No one is above the law."
+    ]
+  },
+  {
+    "id": 14,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Principles of American Government",
+    "question": "Many documents influenced the U.S. Constitution. Name one.",
+    "acceptedAnswers": [
+      "Declaration of Independence",
+      "Articles of Confederation",
+      "Federalist Papers",
+      "Anti-Federalist Papers",
+      "Virginia Declaration of Rights",
+      "Fundamental Orders of Connecticut",
+      "Mayflower Compact",
+      "Iroquois Great Law of Peace"
+    ],
+    "extraInfo": "Earlier charters, the Articles of Confederation, and the Federalist Papers shaped the Constitution.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 1,
+    "studyGuideTitle": "The U.S. Constitution",
+    "studyGuidePage": 8,
+    "officialAnswers": [
+      "Declaration of Independence",
+      "Articles of Confederation",
+      "Federalist Papers",
+      "Anti-Federalist Papers",
+      "Virginia Declaration of Rights",
+      "Fundamental Orders of Connecticut",
+      "Mayflower Compact",
+      "Iroquois Great Law of Peace"
+    ]
+  },
+  {
+    "id": 15,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Principles of American Government",
+    "question": "There are three branches of government. Why?",
+    "acceptedAnswers": [
+      "So one part does not become too powerful",
+      "Checks and balances",
+      "Separation of powers"
+    ],
+    "extraInfo": "Separation of powers and checks and balances keep any one branch from becoming too powerful.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 1,
+    "studyGuideTitle": "The U.S. Constitution",
+    "studyGuidePage": 8,
+    "officialAnswers": [
+      "So one part does not become too powerful",
+      "Checks and balances",
+      "Separation of powers"
+    ]
+  },
+  {
+    "id": 16,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Name the three branches of government.",
+    "acceptedAnswers": [
+      "Legislative, executive, and judicial",
+      "Congress, president, and the courts",
+      "Legislative executive judicial",
+      "Congress president courts"
+    ],
+    "extraInfo": "Congress makes laws, the president enforces them, and the courts interpret them.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "Legislative, executive, and judicial",
+      "Congress, president, and the courts"
+    ]
+  },
+  {
+    "id": 17,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "The President of the United States is in charge of which branch of government?",
+    "acceptedAnswers": [
+      "Executive branch",
+      "The executive branch",
+      "Executive"
+    ],
+    "extraInfo": "Article II gives the president the executive power to carry out federal laws.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 3,
+    "studyGuideTitle": "The Executive Branch",
+    "studyGuidePage": 24,
+    "officialAnswers": [
+      "Executive branch"
+    ]
+  },
+  {
+    "id": 18,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "What part of the federal government writes laws?",
+    "acceptedAnswers": [
+      "Congress",
+      "U.S. Congress",
+      "US Congress",
+      "United States Congress",
+      "Legislature",
+      "National legislature",
+      "Legislative branch"
+    ],
+    "extraInfo": "Only Congress—the Senate and House—can pass federal laws.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "(U.S.) Congress",
+      "(U.S. or national) legislature",
+      "Legislative branch"
+    ]
+  },
+  {
+    "id": 19,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "What are the two parts of the U.S. Congress?",
+    "acceptedAnswers": [
+      "Senate and House of Representatives",
+      "Senate and House",
+      "The Senate and the House",
+      "House and Senate"
+    ],
+    "extraInfo": "Congress is bicameral: a 100-member Senate and a 435-member House.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "Senate and House (of Representatives)"
+    ]
+  },
+  {
+    "id": 20,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Name one power of the U.S. Congress.",
+    "acceptedAnswers": [
+      "Writes laws",
+      "Declares war",
+      "Makes the federal budget",
+      "Write laws",
+      "Declare war",
+      "Make the federal budget"
+    ],
+    "extraInfo": "Article I gives Congress power to legislate, tax, spend, and declare war.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "Writes laws",
+      "Declares war",
+      "Makes the federal budget"
+    ]
+  },
+  {
+    "id": 21,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "How many U.S. senators are there?",
+    "acceptedAnswers": [
+      "One hundred",
+      "100",
+      "One hundred (100)",
+      "Hundred"
+    ],
+    "extraInfo": "Each of the 50 states elects two senators, for 100 total.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "One hundred (100)"
+    ]
+  },
+  {
+    "id": 22,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "How long is a term for a U.S. senator?",
+    "acceptedAnswers": [
+      "Six years",
+      "6 years",
+      "Six (6) years"
+    ],
+    "extraInfo": "Senators serve six-year terms. About one-third of the Senate is elected every two years.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "Six (6) years"
+    ]
+  },
+  {
+    "id": 23,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Who is one of your state’s U.S. senators now?",
+    "acceptedAnswers": [
+      "Answers will vary",
+      "No U.S. senators",
+      "DC has no senators",
+      "The territory has no senators"
+    ],
+    "extraInfo": "Each state has two senators. D.C. and territories have no U.S. senators. Add yours in Settings.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": true,
+    "stateField": "senator",
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "Answers will vary. [District of Columbia residents and residents of U.S. territories should answer that D.C. (or the territory where the applicant lives) has no U.S. senators.]"
+    ]
+  },
+  {
+    "id": 24,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "How many voting members are in the House of Representatives?",
+    "acceptedAnswers": [
+      "Four hundred thirty-five",
+      "435",
+      "Four hundred thirty five"
+    ],
+    "extraInfo": "There are 435 voting representatives, apportioned by state population after each census.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "Four hundred thirty-five (435)"
+    ]
+  },
+  {
+    "id": 25,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "How long is a term for a member of the House of Representatives?",
+    "acceptedAnswers": [
+      "Two years",
+      "2 years",
+      "Two (2) years"
+    ],
+    "extraInfo": "Representatives serve two-year terms so they stay close to voters.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "Two (2) years"
+    ]
+  },
+  {
+    "id": 26,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Why do U.S. representatives serve shorter terms than U.S. senators?",
+    "acceptedAnswers": [
+      "To more closely follow public opinion"
+    ],
+    "extraInfo": "Two-year House terms keep members accountable to current public opinion.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "To more closely follow public opinion"
+    ]
+  },
+  {
+    "id": 27,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "How many senators does each state have?",
+    "acceptedAnswers": [
+      "Two",
+      "2",
+      "Two (2)"
+    ],
+    "extraInfo": "The Constitution gives every state two senators, large or small.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "Two (2)"
+    ]
+  },
+  {
+    "id": 28,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Why does each state have two senators?",
+    "acceptedAnswers": [
+      "Equal representation",
+      "Equal representation for small states",
+      "The Great Compromise",
+      "Connecticut Compromise",
+      "Great Compromise"
+    ],
+    "extraInfo": "The Great Compromise gave states equal Senate votes and House seats by population.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "Equal representation (for small states)",
+      "The Great Compromise (Connecticut Compromise)"
+    ]
+  },
+  {
+    "id": 29,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Name your U.S. representative.",
+    "acceptedAnswers": [
+      "Answers will vary",
+      "No voting representatives",
+      "Delegate",
+      "Resident Commissioner"
+    ],
+    "extraInfo": "You elect one representative for your congressional district. Add the name in Settings.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": true,
+    "stateField": "representative",
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "Answers will vary. [Residents of territories with nonvoting Delegates or Resident Commissioners may provide the name of that Delegate or Commissioner. Also acceptable is any statement that the territory has no (voting) representatives in Congress.]"
+    ]
+  },
+  {
+    "id": 30,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "What is the name of the Speaker of the House of Representatives now?",
+    "acceptedAnswers": [
+      "Mike Johnson",
+      "Johnson",
+      "Speaker Johnson"
+    ],
+    "extraInfo": "The Speaker is elected by the House and is next in line after the vice president. Confirm at uscis.gov/citizenship/testupdates.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": true,
+    "stateSpecific": false,
+    "stateField": "speaker",
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "Visit uscis.gov/citizenship/testupdates for the name of the Speaker of the House of Representatives."
+    ]
+  },
+  {
+    "id": 31,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Who does a U.S. senator represent?",
+    "acceptedAnswers": [
+      "Citizens of their state",
+      "People of their state",
+      "Citizens of the state"
+    ],
+    "extraInfo": "Senators represent everyone in their state, not a single district.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "Citizens of their state",
+      "People of their state"
+    ]
+  },
+  {
+    "id": 32,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Who elects U.S. senators?",
+    "acceptedAnswers": [
+      "Citizens from their state",
+      "People of their state",
+      "Voters in their state"
+    ],
+    "extraInfo": "The 17th Amendment lets the people of each state elect senators.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "Citizens from their state"
+    ]
+  },
+  {
+    "id": 33,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Who does a member of the House of Representatives represent?",
+    "acceptedAnswers": [
+      "Citizens in their congressional district",
+      "Citizens in their district",
+      "People from their congressional district",
+      "People in their district"
+    ],
+    "extraInfo": "A representative speaks for the people of one congressional district.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "Citizens in their (congressional) district",
+      "Citizens in their district",
+      "People from their (congressional) district",
+      "People in their district"
+    ]
+  },
+  {
+    "id": 34,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Who elects members of the House of Representatives?",
+    "acceptedAnswers": [
+      "Citizens from their congressional district",
+      "Citizens in their district",
+      "Voters in their district"
+    ],
+    "extraInfo": "District voters elect their representative every two years.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "Citizens from their (congressional) district"
+    ]
+  },
+  {
+    "id": 35,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Some states have more representatives than other states. Why?",
+    "acceptedAnswers": [
+      "Because of the state's population",
+      "Because they have more people",
+      "Because some states have more people",
+      "State population",
+      "They have more people"
+    ],
+    "extraInfo": "House seats are based on population. Larger states have more representatives.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 2,
+    "studyGuideTitle": "The Legislative Branch",
+    "studyGuidePage": 18,
+    "officialAnswers": [
+      "(Because of) the state’s population",
+      "(Because) they have more people",
+      "(Because) some states have more people"
+    ]
+  },
+  {
+    "id": 36,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "The President of the United States is elected for how many years?",
+    "acceptedAnswers": [
+      "Four years",
+      "4 years",
+      "Four (4) years"
+    ],
+    "extraInfo": "Presidents serve four-year terms and may be elected to only two terms.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 3,
+    "studyGuideTitle": "The Executive Branch",
+    "studyGuidePage": 24,
+    "officialAnswers": [
+      "Four (4) years"
+    ]
+  },
+  {
+    "id": 37,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "The President of the United States can serve only two terms. Why?",
+    "acceptedAnswers": [
+      "Because of the 22nd Amendment",
+      "22nd Amendment",
+      "To keep the president from becoming too powerful"
+    ],
+    "extraInfo": "The 22nd Amendment (1951) limits a president to two elected terms.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 3,
+    "studyGuideTitle": "The Executive Branch",
+    "studyGuidePage": 24,
+    "officialAnswers": [
+      "(Because of) the 22nd Amendment",
+      "To keep the president from becoming too powerful"
+    ]
+  },
+  {
+    "id": 38,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "What is the name of the President of the United States now?",
+    "acceptedAnswers": [
+      "Donald J. Trump",
+      "Donald Trump",
+      "Trump",
+      "Donald John Trump"
+    ],
+    "extraInfo": "The president is elected nationwide and leads the executive branch. Confirm the current name at uscis.gov/citizenship/testupdates.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": true,
+    "stateSpecific": false,
+    "stateField": "president",
+    "studyGuideChapter": 3,
+    "studyGuideTitle": "The Executive Branch",
+    "studyGuidePage": 24,
+    "officialAnswers": [
+      "Visit uscis.gov/citizenship/testupdates for the name of the President of the United States."
+    ]
+  },
+  {
+    "id": 39,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "What is the name of the Vice President of the United States now?",
+    "acceptedAnswers": [
+      "JD Vance",
+      "J.D. Vance",
+      "Vance",
+      "James David Vance"
+    ],
+    "extraInfo": "The vice president is first in the line of succession and president of the Senate. Confirm at uscis.gov/citizenship/testupdates.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": true,
+    "stateSpecific": false,
+    "stateField": "vicePresident",
+    "studyGuideChapter": 3,
+    "studyGuideTitle": "The Executive Branch",
+    "studyGuidePage": 24,
+    "officialAnswers": [
+      "Visit uscis.gov/citizenship/testupdates for the name of the Vice President of the United States."
+    ]
+  },
+  {
+    "id": 40,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "If the president can no longer serve, who becomes president?",
+    "acceptedAnswers": [
+      "The Vice President",
+      "Vice President",
+      "The Vice President of the United States"
+    ],
+    "extraInfo": "The 25th Amendment and Succession Act put the vice president first in line.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 3,
+    "studyGuideTitle": "The Executive Branch",
+    "studyGuidePage": 24,
+    "officialAnswers": [
+      "The Vice President (of the United States)"
+    ]
+  },
+  {
+    "id": 41,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Name one power of the president.",
+    "acceptedAnswers": [
+      "Signs bills into law",
+      "Vetoes bills",
+      "Enforces laws",
+      "Commander in Chief",
+      "Commander in Chief of the military",
+      "Chief diplomat",
+      "Appoints federal judges"
+    ],
+    "extraInfo": "The president enforces laws, commands the military, and nominates federal judges.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 3,
+    "studyGuideTitle": "The Executive Branch",
+    "studyGuidePage": 24,
+    "officialAnswers": [
+      "Signs bills into law",
+      "Vetoes bills",
+      "Enforces laws",
+      "Commander in Chief (of the military)",
+      "Chief diplomat",
+      "Appoints federal judges"
+    ]
+  },
+  {
+    "id": 42,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Who is Commander in Chief of the U.S. military?",
+    "acceptedAnswers": [
+      "The President",
+      "President",
+      "The President of the United States"
+    ],
+    "extraInfo": "Article II makes the president Commander in Chief of the armed forces.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 3,
+    "studyGuideTitle": "The Executive Branch",
+    "studyGuidePage": 24,
+    "officialAnswers": [
+      "The President (of the United States)"
+    ]
+  },
+  {
+    "id": 43,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Who signs bills to become laws?",
+    "acceptedAnswers": [
+      "The President",
+      "President",
+      "The President of the United States"
+    ],
+    "extraInfo": "After both chambers pass a bill, the president may sign it into law or veto it.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 3,
+    "studyGuideTitle": "The Executive Branch",
+    "studyGuidePage": 24,
+    "officialAnswers": [
+      "The President (of the United States)"
+    ]
+  },
+  {
+    "id": 44,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Who vetoes bills?",
+    "acceptedAnswers": [
+      "The President",
+      "President",
+      "The President of the United States"
+    ],
+    "extraInfo": "A veto returns a bill to Congress. Congress can override with a two-thirds vote in each chamber.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 3,
+    "studyGuideTitle": "The Executive Branch",
+    "studyGuidePage": 24,
+    "officialAnswers": [
+      "The President (of the United States)"
+    ]
+  },
+  {
+    "id": 45,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Who appoints federal judges?",
+    "acceptedAnswers": [
+      "The President",
+      "President",
+      "The President of the United States"
+    ],
+    "extraInfo": "The president nominates federal judges; the Senate confirms them.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 3,
+    "studyGuideTitle": "The Executive Branch",
+    "studyGuidePage": 24,
+    "officialAnswers": [
+      "The President (of the United States)"
+    ]
+  },
+  {
+    "id": 46,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "The executive branch has many parts. Name one.",
+    "acceptedAnswers": [
+      "President",
+      "President of the United States",
+      "Cabinet",
+      "Federal departments and agencies",
+      "Federal agencies"
+    ],
+    "extraInfo": "The executive branch includes the president, Cabinet, and federal agencies.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 3,
+    "studyGuideTitle": "The Executive Branch",
+    "studyGuidePage": 24,
+    "officialAnswers": [
+      "President (of the United States)",
+      "Cabinet",
+      "Federal departments and agencies"
+    ]
+  },
+  {
+    "id": 47,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "What does the President’s Cabinet do?",
+    "acceptedAnswers": [
+      "Advises the President",
+      "Advises the President of the United States"
+    ],
+    "extraInfo": "Cabinet secretaries lead departments and advise the president.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 3,
+    "studyGuideTitle": "The Executive Branch",
+    "studyGuidePage": 24,
+    "officialAnswers": [
+      "Advises the President (of the United States)"
+    ]
+  },
+  {
+    "id": 48,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "What are two Cabinet-level positions?",
+    "acceptedAnswers": [
+      "Attorney General",
+      "Secretary of Agriculture",
+      "Secretary of Commerce",
+      "Secretary of Education",
+      "Secretary of Energy",
+      "Secretary of Health and Human Services",
+      "Secretary of Homeland Security",
+      "Secretary of Housing and Urban Development",
+      "Secretary of the Interior",
+      "Secretary of Labor",
+      "Secretary of State",
+      "Secretary of Transportation",
+      "Secretary of the Treasury",
+      "Secretary of Veterans Affairs",
+      "Secretary of War",
+      "Secretary of Defense",
+      "Vice President",
+      "Vice-President",
+      "Administrator of the Environmental Protection Agency",
+      "Administrator of the Small Business Administration",
+      "Director of the Central Intelligence Agency",
+      "Director of the Office of Management and Budget",
+      "Director of National Intelligence",
+      "United States Trade Representative"
+    ],
+    "extraInfo": "Cabinet-level posts include the vice president and the heads of major departments and agencies.",
+    "starred6520": false,
+    "answerKind": "all_n",
+    "minRequired": 2,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 3,
+    "studyGuideTitle": "The Executive Branch",
+    "studyGuidePage": 24,
+    "officialAnswers": [
+      "Attorney General",
+      "Secretary of Agriculture",
+      "Secretary of Commerce",
+      "Secretary of Education",
+      "Secretary of Energy",
+      "Secretary of Health and Human Services",
+      "Secretary of Homeland Security",
+      "Secretary of Housing and Urban Development",
+      "Secretary of the Interior",
+      "Secretary of Labor",
+      "Secretary of State",
+      "Secretary of Transportation",
+      "Secretary of the Treasury",
+      "Secretary of Veterans Affairs",
+      "Secretary of War (Defense)",
+      "Vice-President",
+      "Administrator of the Environmental Protection Agency",
+      "Administrator of the Small Business Administration",
+      "Director of the Central Intelligence Agency",
+      "Director of the Office of Management and Budget",
+      "Director of National Intelligence",
+      "United States Trade Representative"
+    ]
+  },
+  {
+    "id": 49,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Why is the Electoral College important?",
+    "acceptedAnswers": [
+      "It decides who is elected president",
+      "It provides a compromise between the popular election of the president and congressional selection"
+    ],
+    "extraInfo": "States choose electors who formally elect the president. It balances popular and state-based selection.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 3,
+    "studyGuideTitle": "The Executive Branch",
+    "studyGuidePage": 24,
+    "officialAnswers": [
+      "It decides who is elected president.",
+      "It provides a compromise between the popular election of the president and congressional selection."
+    ]
+  },
+  {
+    "id": 50,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "What is one part of the judicial branch?",
+    "acceptedAnswers": [
+      "Supreme Court",
+      "Federal Courts",
+      "Federal court"
+    ],
+    "extraInfo": "The judicial branch is the Supreme Court and lower federal courts.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 4,
+    "studyGuideTitle": "The Judicial Branch",
+    "studyGuidePage": 29,
+    "officialAnswers": [
+      "Supreme Court",
+      "Federal Courts"
+    ]
+  },
+  {
+    "id": 51,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "What does the judicial branch do?",
+    "acceptedAnswers": [
+      "Reviews laws",
+      "Explains laws",
+      "Resolves disputes about the law",
+      "Resolves disagreements about the law",
+      "Decides if a law goes against the Constitution",
+      "Decides if a law goes against the U.S. Constitution"
+    ],
+    "extraInfo": "Courts interpret laws and can strike down laws that violate the Constitution (judicial review).",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 4,
+    "studyGuideTitle": "The Judicial Branch",
+    "studyGuidePage": 29,
+    "officialAnswers": [
+      "Reviews laws",
+      "Explains laws",
+      "Resolves disputes (disagreements) about the law",
+      "Decides if a law goes against the (U.S.) Constitution"
+    ]
+  },
+  {
+    "id": 52,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "What is the highest court in the United States?",
+    "acceptedAnswers": [
+      "Supreme Court",
+      "The Supreme Court",
+      "U.S. Supreme Court"
+    ],
+    "extraInfo": "The Supreme Court’s decisions are the last word on federal law and the Constitution.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 4,
+    "studyGuideTitle": "The Judicial Branch",
+    "studyGuidePage": 29,
+    "officialAnswers": [
+      "Supreme Court"
+    ]
+  },
+  {
+    "id": 53,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "How many seats are on the Supreme Court?",
+    "acceptedAnswers": [
+      "Nine",
+      "9",
+      "Nine (9)"
+    ],
+    "extraInfo": "Congress set the number at nine: one chief justice and eight associate justices.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 4,
+    "studyGuideTitle": "The Judicial Branch",
+    "studyGuidePage": 29,
+    "officialAnswers": [
+      "Nine (9)"
+    ]
+  },
+  {
+    "id": 54,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "How many Supreme Court justices are usually needed to decide a case?",
+    "acceptedAnswers": [
+      "Five",
+      "5",
+      "Five (5)"
+    ],
+    "extraInfo": "A majority of the justices who hear a case decides it—usually five of nine.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 4,
+    "studyGuideTitle": "The Judicial Branch",
+    "studyGuidePage": 29,
+    "officialAnswers": [
+      "Five (5)"
+    ]
+  },
+  {
+    "id": 55,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "How long do Supreme Court justices serve?",
+    "acceptedAnswers": [
+      "For life",
+      "Life",
+      "Lifetime appointment",
+      "Until retirement"
+    ],
+    "extraInfo": "Justices serve during “good Behaviour,” which in practice is a lifetime appointment.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 4,
+    "studyGuideTitle": "The Judicial Branch",
+    "studyGuidePage": 29,
+    "officialAnswers": [
+      "(For) life",
+      "Lifetime appointment",
+      "(Until) retirement"
+    ]
+  },
+  {
+    "id": 56,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Supreme Court justices serve for life. Why?",
+    "acceptedAnswers": [
+      "To be independent",
+      "To be independent of politics",
+      "To limit outside influence",
+      "To limit outside political influence"
+    ],
+    "extraInfo": "Life tenure helps justices decide cases based on law, not elections.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 4,
+    "studyGuideTitle": "The Judicial Branch",
+    "studyGuidePage": 29,
+    "officialAnswers": [
+      "To be independent (of politics)",
+      "To limit outside (political) influence"
+    ]
+  },
+  {
+    "id": 57,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Who is the Chief Justice of the United States now?",
+    "acceptedAnswers": [
+      "John Roberts",
+      "John G. Roberts",
+      "John G. Roberts, Jr.",
+      "Roberts"
+    ],
+    "extraInfo": "The chief justice leads the Supreme Court and presides at presidential impeachment trials. Confirm at uscis.gov/citizenship/testupdates.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": true,
+    "stateSpecific": false,
+    "stateField": "chiefJustice",
+    "studyGuideChapter": 4,
+    "studyGuideTitle": "The Judicial Branch",
+    "studyGuidePage": 29,
+    "officialAnswers": [
+      "Visit uscis.gov/citizenship/testupdates for the name of the Chief Justice of the United States."
+    ]
+  },
+  {
+    "id": 58,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Name one power that is only for the federal government.",
+    "acceptedAnswers": [
+      "Print paper money",
+      "Mint coins",
+      "Declare war",
+      "Create an army",
+      "Make treaties",
+      "Set foreign policy"
+    ],
+    "extraInfo": "The Constitution gives the national government exclusive powers such as coining money and declaring war.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 5,
+    "studyGuideTitle": "Rights and Responsibilities",
+    "studyGuidePage": 33,
+    "officialAnswers": [
+      "Print paper money",
+      "Mint coins",
+      "Declare war",
+      "Create an army",
+      "Make treaties",
+      "Set foreign policy"
+    ]
+  },
+  {
+    "id": 59,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Name one power that is only for the states.",
+    "acceptedAnswers": [
+      "Provide schooling and education",
+      "Provide education",
+      "Provide protection",
+      "Provide police",
+      "Provide safety",
+      "Fire departments",
+      "Give a driver's license",
+      "Approve zoning and land use"
+    ],
+    "extraInfo": "The 10th Amendment reserves many powers to the states, including schools, police, and driver’s licenses.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 5,
+    "studyGuideTitle": "Rights and Responsibilities",
+    "studyGuidePage": 33,
+    "officialAnswers": [
+      "Provide schooling and education",
+      "Provide protection (police)",
+      "Provide safety (fire departments)",
+      "Give a driver’s license",
+      "Approve zoning and land use"
+    ]
+  },
+  {
+    "id": 60,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "What is the purpose of the 10th Amendment?",
+    "acceptedAnswers": [
+      "Powers not given to the federal government belong to the states or to the people",
+      "It states that the powers not given to the federal government belong to the states or to the people"
+    ],
+    "extraInfo": "The 10th Amendment protects federalism: leftover powers stay with the states or the people.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 5,
+    "studyGuideTitle": "Rights and Responsibilities",
+    "studyGuidePage": 33,
+    "officialAnswers": [
+      "(It states that the) powers not given to the federal government belong to the states or to the people."
+    ]
+  },
+  {
+    "id": 61,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "Who is the governor of your state now?",
+    "acceptedAnswers": [
+      "Answers will vary",
+      "DC does not have a governor"
+    ],
+    "extraInfo": "The governor is the state’s chief executive. D.C. does not have a governor. Add yours in Settings.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": true,
+    "stateField": "governor",
+    "studyGuideChapter": 6,
+    "studyGuideTitle": "U.S. Geography",
+    "studyGuidePage": 38,
+    "officialAnswers": [
+      "Answers will vary. [District of Columbia residents should answer that D.C. does not have a governor.]"
+    ]
+  },
+  {
+    "id": 62,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "System of Government",
+    "question": "What is the capital of your state?",
+    "acceptedAnswers": [
+      "Answers will vary",
+      "DC is not a state",
+      "DC does not have a capital"
+    ],
+    "extraInfo": "Each state has a capital where the legislature meets. Add yours in Settings.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": true,
+    "stateField": "capital",
+    "studyGuideChapter": 6,
+    "studyGuideTitle": "U.S. Geography",
+    "studyGuidePage": 38,
+    "officialAnswers": [
+      "Answers will vary. [District of Columbia residents should answer that D.C. is not a state and does not have a capital. Residents of U.S. territories should name the capital of the territory.]"
+    ]
+  },
+  {
+    "id": 63,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Rights and Responsibilities",
+    "question": "There are four amendments to the U.S. Constitution about who can vote. Describe one of them.",
+    "acceptedAnswers": [
+      "Citizens eighteen and older can vote",
+      "Citizens 18 and older can vote",
+      "You don't have to pay a poll tax to vote",
+      "You don't have to pay to vote",
+      "Any citizen can vote",
+      "Women and men can vote",
+      "A male citizen of any race can vote"
+    ],
+    "extraInfo": "The 15th, 19th, 24th, and 26th Amendments expanded voting rights and banned poll taxes.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 5,
+    "studyGuideTitle": "Rights and Responsibilities",
+    "studyGuidePage": 33,
+    "officialAnswers": [
+      "Citizens eighteen (18) and older (can vote).",
+      "You don’t have to pay (a poll tax) to vote.",
+      "Any citizen can vote. (Women and men can vote.)",
+      "A male citizen of any race (can vote)."
+    ]
+  },
+  {
+    "id": 64,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Rights and Responsibilities",
+    "question": "Who can vote in federal elections, run for federal office, and serve on a jury in the United States?",
+    "acceptedAnswers": [
+      "Citizens",
+      "Citizens of the United States",
+      "U.S. citizens",
+      "US citizens"
+    ],
+    "extraInfo": "These civic duties and rights belong to U.S. citizens.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 5,
+    "studyGuideTitle": "Rights and Responsibilities",
+    "studyGuidePage": 33,
+    "officialAnswers": [
+      "Citizens",
+      "Citizens of the United States",
+      "U.S. citizens"
+    ]
+  },
+  {
+    "id": 65,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Rights and Responsibilities",
+    "question": "What are three rights of everyone living in the United States?",
+    "acceptedAnswers": [
+      "Freedom of expression",
+      "Freedom of speech",
+      "Freedom of assembly",
+      "Freedom to petition the government",
+      "Freedom of religion",
+      "The right to bear arms"
+    ],
+    "extraInfo": "Many Bill of Rights freedoms apply to everyone living in the United States, not only citizens.",
+    "starred6520": false,
+    "answerKind": "all_n",
+    "minRequired": 3,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 5,
+    "studyGuideTitle": "Rights and Responsibilities",
+    "studyGuidePage": 33,
+    "officialAnswers": [
+      "Freedom of expression",
+      "Freedom of speech",
+      "Freedom of assembly",
+      "Freedom to petition the government",
+      "Freedom of religion",
+      "The right to bear arms"
+    ]
+  },
+  {
+    "id": 66,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Rights and Responsibilities",
+    "question": "What do we show loyalty to when we say the Pledge of Allegiance?",
+    "acceptedAnswers": [
+      "The United States",
+      "The flag",
+      "United States",
+      "The US flag"
+    ],
+    "extraInfo": "The Pledge is a promise of loyalty to the United States and its flag.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 5,
+    "studyGuideTitle": "Rights and Responsibilities",
+    "studyGuidePage": 33,
+    "officialAnswers": [
+      "The United States",
+      "The flag"
+    ]
+  },
+  {
+    "id": 67,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Rights and Responsibilities",
+    "question": "Name two promises that new citizens make in the Oath of Allegiance.",
+    "acceptedAnswers": [
+      "Give up loyalty to other countries",
+      "Defend the Constitution",
+      "Defend the U.S. Constitution",
+      "Obey the laws of the United States",
+      "Serve in the military if needed",
+      "Serve the nation if needed",
+      "Be loyal to the United States"
+    ],
+    "extraInfo": "New citizens swear to support the Constitution, obey U.S. laws, and drop foreign allegiances.",
+    "starred6520": false,
+    "answerKind": "all_n",
+    "minRequired": 2,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 5,
+    "studyGuideTitle": "Rights and Responsibilities",
+    "studyGuidePage": 33,
+    "officialAnswers": [
+      "Give up loyalty to other countries",
+      "Defend the (U.S.) Constitution",
+      "Obey the laws of the United States",
+      "Serve in the military (if needed)",
+      "Serve (help, do important work for) the nation (if needed)",
+      "Be loyal to the United States"
+    ]
+  },
+  {
+    "id": 68,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Rights and Responsibilities",
+    "question": "How can people become United States citizens?",
+    "acceptedAnswers": [
+      "Be born in the United States",
+      "Born in the United States",
+      "Naturalize",
+      "Naturalization",
+      "Derive citizenship"
+    ],
+    "extraInfo": "Citizenship comes by birth under the 14th Amendment, naturalization, or derivation through parents.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 5,
+    "studyGuideTitle": "Rights and Responsibilities",
+    "studyGuidePage": 33,
+    "officialAnswers": [
+      "Be born in the United States, under the conditions set by the 14th Amendment",
+      "Naturalize",
+      "Derive citizenship (under conditions set by Congress)"
+    ]
+  },
+  {
+    "id": 69,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Rights and Responsibilities",
+    "question": "What are two examples of civic participation in the United States?",
+    "acceptedAnswers": [
+      "Vote",
+      "Run for office",
+      "Join a political party",
+      "Help with a campaign",
+      "Join a civic group",
+      "Join a community group",
+      "Give an elected official your opinion",
+      "Contact elected officials",
+      "Support or oppose an issue or policy",
+      "Write to a newspaper"
+    ],
+    "extraInfo": "Civic participation means taking part in public life—voting, campaigns, and speaking up.",
+    "starred6520": false,
+    "answerKind": "all_n",
+    "minRequired": 2,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 5,
+    "studyGuideTitle": "Rights and Responsibilities",
+    "studyGuidePage": 33,
+    "officialAnswers": [
+      "Vote",
+      "Run for office",
+      "Join a political party",
+      "Help with a campaign",
+      "Join a civic group",
+      "Join a community group",
+      "Give an elected official your opinion (on an issue)",
+      "Contact elected officials",
+      "Support or oppose an issue or policy",
+      "Write to a newspaper"
+    ]
+  },
+  {
+    "id": 70,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Rights and Responsibilities",
+    "question": "What is one way Americans can serve their country?",
+    "acceptedAnswers": [
+      "Vote",
+      "Pay taxes",
+      "Obey the law",
+      "Serve in the military",
+      "Run for office",
+      "Work for local, state, or federal government"
+    ],
+    "extraInfo": "Service includes voting, paying taxes, military service, and government work.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 5,
+    "studyGuideTitle": "Rights and Responsibilities",
+    "studyGuidePage": 33,
+    "officialAnswers": [
+      "Vote",
+      "Pay taxes",
+      "Obey the law",
+      "Serve in the military",
+      "Run for office",
+      "Work for local, state, or federal government"
+    ]
+  },
+  {
+    "id": 71,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Rights and Responsibilities",
+    "question": "Why is it important to pay federal taxes?",
+    "acceptedAnswers": [
+      "Required by law",
+      "All people pay to fund the federal government",
+      "Required by the Constitution",
+      "Required by the 16th Amendment",
+      "Civic duty"
+    ],
+    "extraInfo": "The 16th Amendment allows a federal income tax, which funds national programs.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 5,
+    "studyGuideTitle": "Rights and Responsibilities",
+    "studyGuidePage": 33,
+    "officialAnswers": [
+      "Required by law",
+      "All people pay to fund the federal government",
+      "Required by the (U.S.) Constitution (16th Amendment)",
+      "Civic duty"
+    ]
+  },
+  {
+    "id": 72,
+    "section": "AMERICAN GOVERNMENT",
+    "topic": "Rights and Responsibilities",
+    "question": "It is important for all men age 18 through 25 to register for the Selective Service. Name one reason why.",
+    "acceptedAnswers": [
+      "Required by law",
+      "Civic duty",
+      "Makes the draft fair if needed"
+    ],
+    "extraInfo": "Selective Service registration keeps a fair draft system ready if Congress ever authorizes one.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 5,
+    "studyGuideTitle": "Rights and Responsibilities",
+    "studyGuidePage": 33,
+    "officialAnswers": [
+      "Required by law",
+      "Civic duty",
+      "Makes the draft fair, if needed"
+    ]
+  },
+  {
+    "id": 73,
+    "section": "AMERICAN HISTORY",
+    "topic": "Colonial Period and Independence",
+    "question": "The colonists came to America for many reasons. Name one.",
+    "acceptedAnswers": [
+      "Freedom",
+      "Political liberty",
+      "Religious freedom",
+      "Economic opportunity",
+      "Escape persecution"
+    ],
+    "extraInfo": "Colonists sought religious freedom, political liberty, and economic opportunity.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 7,
+    "studyGuideTitle": "Early American History",
+    "studyGuidePage": 43,
+    "officialAnswers": [
+      "Freedom",
+      "Political liberty",
+      "Religious freedom",
+      "Economic opportunity",
+      "Escape persecution"
+    ]
+  },
+  {
+    "id": 74,
+    "section": "AMERICAN HISTORY",
+    "topic": "Colonial Period and Independence",
+    "question": "Who lived in America before the Europeans arrived?",
+    "acceptedAnswers": [
+      "American Indians",
+      "Native Americans",
+      "Indigenous peoples"
+    ],
+    "extraInfo": "American Indian and Alaska Native nations lived here for thousands of years before Europeans.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 7,
+    "studyGuideTitle": "Early American History",
+    "studyGuidePage": 43,
+    "officialAnswers": [
+      "American Indians",
+      "Native Americans"
+    ]
+  },
+  {
+    "id": 75,
+    "section": "AMERICAN HISTORY",
+    "topic": "Colonial Period and Independence",
+    "question": "What group of people was taken and sold as slaves?",
+    "acceptedAnswers": [
+      "Africans",
+      "People from Africa"
+    ],
+    "extraInfo": "Millions of Africans were forced into slavery and brought to the Americas.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 7,
+    "studyGuideTitle": "Early American History",
+    "studyGuidePage": 43,
+    "officialAnswers": [
+      "Africans",
+      "People from Africa"
+    ]
+  },
+  {
+    "id": 76,
+    "section": "AMERICAN HISTORY",
+    "topic": "Colonial Period and Independence",
+    "question": "What war did the Americans fight to win independence from Britain?",
+    "acceptedAnswers": [
+      "American Revolution",
+      "Revolutionary War",
+      "American Revolutionary War",
+      "War for American Independence",
+      "War for Independence"
+    ],
+    "extraInfo": "The Revolutionary War (1775–1783) won independence from Britain.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 8,
+    "studyGuideTitle": "The American Revolutionary War and the Declaration of Independence",
+    "studyGuidePage": 47,
+    "officialAnswers": [
+      "American Revolution",
+      "The (American) Revolutionary War",
+      "War for (American) Independence"
+    ]
+  },
+  {
+    "id": 77,
+    "section": "AMERICAN HISTORY",
+    "topic": "Colonial Period and Independence",
+    "question": "Name one reason why the Americans declared independence from Britain.",
+    "acceptedAnswers": [
+      "High taxes",
+      "Taxation without representation",
+      "British soldiers stayed in Americans' houses",
+      "Quartering",
+      "Boarding",
+      "They did not have self-government",
+      "Boston Massacre",
+      "Boston Tea Party",
+      "Tea Act",
+      "Stamp Act",
+      "Sugar Act",
+      "Townshend Acts",
+      "Intolerable Acts",
+      "Coercive Acts"
+    ],
+    "extraInfo": "Colonists protested taxes without representation, quartering, and limits on self-government.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 8,
+    "studyGuideTitle": "The American Revolutionary War and the Declaration of Independence",
+    "studyGuidePage": 47,
+    "officialAnswers": [
+      "High taxes",
+      "Taxation without representation",
+      "British soldiers stayed in Americans’ houses (boarding, quartering)",
+      "They did not have self-government",
+      "Boston Massacre",
+      "Boston Tea Party (Tea Act)",
+      "Stamp Act",
+      "Sugar Act",
+      "Townshend Acts",
+      "Intolerable (Coercive) Acts"
+    ]
+  },
+  {
+    "id": 78,
+    "section": "AMERICAN HISTORY",
+    "topic": "Colonial Period and Independence",
+    "question": "Who wrote the Declaration of Independence?",
+    "acceptedAnswers": [
+      "Thomas Jefferson",
+      "Jefferson"
+    ],
+    "extraInfo": "The Continental Congress asked Jefferson to draft the Declaration in 1776.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 8,
+    "studyGuideTitle": "The American Revolutionary War and the Declaration of Independence",
+    "studyGuidePage": 47,
+    "officialAnswers": [
+      "(Thomas) Jefferson"
+    ]
+  },
+  {
+    "id": 79,
+    "section": "AMERICAN HISTORY",
+    "topic": "Colonial Period and Independence",
+    "question": "When was the Declaration of Independence adopted?",
+    "acceptedAnswers": [
+      "July 4, 1776",
+      "July 4 1776",
+      "4 July 1776",
+      "July 4th 1776",
+      "7/4/1776"
+    ],
+    "extraInfo": "Congress adopted the Declaration on July 4, 1776—now Independence Day.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 8,
+    "studyGuideTitle": "The American Revolutionary War and the Declaration of Independence",
+    "studyGuidePage": 47,
+    "officialAnswers": [
+      "July 4, 1776"
+    ]
+  },
+  {
+    "id": 80,
+    "section": "AMERICAN HISTORY",
+    "topic": "Colonial Period and Independence",
+    "question": "The American Revolution had many important events. Name one.",
+    "acceptedAnswers": [
+      "Battle of Bunker Hill",
+      "Bunker Hill",
+      "Declaration of Independence",
+      "Washington Crossing the Delaware",
+      "Battle of Trenton",
+      "Battle of Saratoga",
+      "Saratoga",
+      "Valley Forge",
+      "Battle of Yorktown",
+      "Yorktown",
+      "British surrender at Yorktown"
+    ],
+    "extraInfo": "Key moments include Saratoga, Valley Forge, and the British surrender at Yorktown.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 8,
+    "studyGuideTitle": "The American Revolutionary War and the Declaration of Independence",
+    "studyGuidePage": 47,
+    "officialAnswers": [
+      "(Battle of) Bunker Hill",
+      "Declaration of Independence",
+      "Washington Crossing the Delaware (Battle of Trenton)",
+      "(Battle of) Saratoga",
+      "Valley Forge (Encampment)",
+      "(Battle of) Yorktown (British surrender at Yorktown)"
+    ]
+  },
+  {
+    "id": 81,
+    "section": "AMERICAN HISTORY",
+    "topic": "Colonial Period and Independence",
+    "question": "There were 13 original states. Name five.",
+    "acceptedAnswers": [
+      "New Hampshire",
+      "Massachusetts",
+      "Rhode Island",
+      "Connecticut",
+      "New York",
+      "New Jersey",
+      "Pennsylvania",
+      "Delaware",
+      "Maryland",
+      "Virginia",
+      "North Carolina",
+      "South Carolina",
+      "Georgia",
+      "NH",
+      "MA",
+      "RI",
+      "CT",
+      "NY",
+      "NJ",
+      "PA",
+      "DE",
+      "MD",
+      "VA",
+      "NC",
+      "SC",
+      "GA"
+    ],
+    "extraInfo": "The thirteen colonies became the first states after independence.",
+    "starred6520": false,
+    "answerKind": "all_n",
+    "minRequired": 5,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 6,
+    "studyGuideTitle": "U.S. Geography",
+    "studyGuidePage": 38,
+    "officialAnswers": [
+      "New Hampshire",
+      "Massachusetts",
+      "Rhode Island",
+      "Connecticut",
+      "New York",
+      "New Jersey",
+      "Pennsylvania",
+      "Delaware",
+      "Maryland",
+      "Virginia",
+      "North Carolina",
+      "South Carolina",
+      "Georgia"
+    ]
+  },
+  {
+    "id": 82,
+    "section": "AMERICAN HISTORY",
+    "topic": "Colonial Period and Independence",
+    "question": "What founding document was written in 1787?",
+    "acceptedAnswers": [
+      "The Constitution",
+      "U.S. Constitution",
+      "US Constitution",
+      "Constitution"
+    ],
+    "extraInfo": "Delegates wrote the Constitution at the Philadelphia Convention in 1787.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 9,
+    "studyGuideTitle": "A New Government and an Expanding Nation",
+    "studyGuidePage": 52,
+    "officialAnswers": [
+      "(U.S.) Constitution"
+    ]
+  },
+  {
+    "id": 83,
+    "section": "AMERICAN HISTORY",
+    "topic": "Colonial Period and Independence",
+    "question": "The Federalist Papers supported the passage of the U.S. Constitution. Name one of the writers.",
+    "acceptedAnswers": [
+      "James Madison",
+      "Madison",
+      "Alexander Hamilton",
+      "Hamilton",
+      "John Jay",
+      "Jay",
+      "Publius"
+    ],
+    "extraInfo": "Hamilton, Madison, and Jay wrote the Federalist Papers under the name Publius.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 9,
+    "studyGuideTitle": "A New Government and an Expanding Nation",
+    "studyGuidePage": 52,
+    "officialAnswers": [
+      "(James) Madison",
+      "(Alexander) Hamilton",
+      "(John) Jay",
+      "Publius"
+    ]
+  },
+  {
+    "id": 84,
+    "section": "AMERICAN HISTORY",
+    "topic": "Colonial Period and Independence",
+    "question": "Why were the Federalist Papers important?",
+    "acceptedAnswers": [
+      "They helped people understand the Constitution",
+      "They helped people understand the U.S. Constitution",
+      "They supported passing the Constitution",
+      "They supported passing the U.S. Constitution"
+    ],
+    "extraInfo": "The essays explained the new Constitution and argued for ratification.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 9,
+    "studyGuideTitle": "A New Government and an Expanding Nation",
+    "studyGuidePage": 52,
+    "officialAnswers": [
+      "They helped people understand the (U.S.) Constitution.",
+      "They supported passing the (U.S.) Constitution."
+    ]
+  },
+  {
+    "id": 85,
+    "section": "AMERICAN HISTORY",
+    "topic": "Colonial Period and Independence",
+    "question": "Benjamin Franklin is famous for many things. Name one.",
+    "acceptedAnswers": [
+      "Founded the first free public libraries",
+      "First Postmaster General of the United States",
+      "Helped write the Declaration of Independence",
+      "Inventor",
+      "U.S. diplomat",
+      "US diplomat"
+    ],
+    "extraInfo": "Franklin was a printer, inventor, diplomat, and a framer of independence.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 9,
+    "studyGuideTitle": "A New Government and an Expanding Nation",
+    "studyGuidePage": 52,
+    "officialAnswers": [
+      "Founded the first free public libraries",
+      "First Postmaster General of the United States",
+      "Helped write the Declaration of Independence",
+      "Inventor",
+      "U.S. diplomat"
+    ]
+  },
+  {
+    "id": 86,
+    "section": "AMERICAN HISTORY",
+    "topic": "Colonial Period and Independence",
+    "question": "George Washington is famous for many things. Name one.",
+    "acceptedAnswers": [
+      "Father of Our Country",
+      "First president of the United States",
+      "General of the Continental Army",
+      "President of the Constitutional Convention"
+    ],
+    "extraInfo": "Washington led the Continental Army, chaired the Convention, and became the first president.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 9,
+    "studyGuideTitle": "A New Government and an Expanding Nation",
+    "studyGuidePage": 52,
+    "officialAnswers": [
+      "“Father of Our Country”",
+      "First president of the United States",
+      "General of the Continental Army",
+      "President of the Constitutional Convention"
+    ]
+  },
+  {
+    "id": 87,
+    "section": "AMERICAN HISTORY",
+    "topic": "Colonial Period and Independence",
+    "question": "Thomas Jefferson is famous for many things. Name one.",
+    "acceptedAnswers": [
+      "Writer of the Declaration of Independence",
+      "Third president of the United States",
+      "Doubled the size of the United States",
+      "Louisiana Purchase",
+      "First Secretary of State",
+      "Founded the University of Virginia",
+      "Writer of the Virginia Statute on Religious Freedom"
+    ],
+    "extraInfo": "Jefferson wrote the Declaration, bought Louisiana, and founded the University of Virginia.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 9,
+    "studyGuideTitle": "A New Government and an Expanding Nation",
+    "studyGuidePage": 52,
+    "officialAnswers": [
+      "Writer of the Declaration of Independence",
+      "Third president of the United States",
+      "Doubled the size of the United States (Louisiana Purchase)",
+      "First Secretary of State",
+      "Founded the University of Virginia",
+      "Writer of the Virginia Statute on Religious Freedom"
+    ]
+  },
+  {
+    "id": 88,
+    "section": "AMERICAN HISTORY",
+    "topic": "Colonial Period and Independence",
+    "question": "James Madison is famous for many things. Name one.",
+    "acceptedAnswers": [
+      "Father of the Constitution",
+      "Fourth president of the United States",
+      "President during the War of 1812",
+      "One of the writers of the Federalist Papers"
+    ],
+    "extraInfo": "Madison is called the Father of the Constitution and later served as the fourth president.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 9,
+    "studyGuideTitle": "A New Government and an Expanding Nation",
+    "studyGuidePage": 52,
+    "officialAnswers": [
+      "“Father of the Constitution”",
+      "Fourth president of the United States",
+      "President during the War of 1812",
+      "One of the writers of the Federalist Papers"
+    ]
+  },
+  {
+    "id": 89,
+    "section": "AMERICAN HISTORY",
+    "topic": "Colonial Period and Independence",
+    "question": "Alexander Hamilton is famous for many things. Name one.",
+    "acceptedAnswers": [
+      "First Secretary of the Treasury",
+      "One of the writers of the Federalist Papers",
+      "Helped establish the First Bank of the United States",
+      "Aide to General George Washington",
+      "Member of the Continental Congress"
+    ],
+    "extraInfo": "Hamilton built the early financial system and argued for the Constitution.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 9,
+    "studyGuideTitle": "A New Government and an Expanding Nation",
+    "studyGuidePage": 52,
+    "officialAnswers": [
+      "First Secretary of the Treasury",
+      "One of the writers of the Federalist Papers",
+      "Helped establish the First Bank of the United States",
+      "Aide to General George Washington",
+      "Member of the Continental Congress"
+    ]
+  },
+  {
+    "id": 90,
+    "section": "AMERICAN HISTORY",
+    "topic": "1800s",
+    "question": "What territory did the United States buy from France in 1803?",
+    "acceptedAnswers": [
+      "Louisiana Territory",
+      "Louisiana",
+      "Louisiana Purchase"
+    ],
+    "extraInfo": "The Louisiana Purchase doubled U.S. land and opened the Mississippi River.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 9,
+    "studyGuideTitle": "A New Government and an Expanding Nation",
+    "studyGuidePage": 52,
+    "officialAnswers": [
+      "Louisiana Territory",
+      "Louisiana"
+    ]
+  },
+  {
+    "id": 91,
+    "section": "AMERICAN HISTORY",
+    "topic": "1800s",
+    "question": "Name one war fought by the United States in the 1800s.",
+    "acceptedAnswers": [
+      "War of 1812",
+      "Mexican-American War",
+      "Civil War",
+      "Spanish-American War"
+    ],
+    "extraInfo": "19th-century wars included 1812, the Mexican-American War, the Civil War, and 1898.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 9,
+    "studyGuideTitle": "A New Government and an Expanding Nation",
+    "studyGuidePage": 52,
+    "officialAnswers": [
+      "War of 1812",
+      "Mexican-American War",
+      "Civil War",
+      "Spanish-American War"
+    ]
+  },
+  {
+    "id": 92,
+    "section": "AMERICAN HISTORY",
+    "topic": "1800s",
+    "question": "Name the U.S. war between the North and the South.",
+    "acceptedAnswers": [
+      "The Civil War",
+      "Civil War"
+    ],
+    "extraInfo": "The Civil War (1861–1865) was fought over the Union, slavery, and secession.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 10,
+    "studyGuideTitle": "The Civil War",
+    "studyGuidePage": 58,
+    "officialAnswers": [
+      "The Civil War"
+    ]
+  },
+  {
+    "id": 93,
+    "section": "AMERICAN HISTORY",
+    "topic": "1800s",
+    "question": "The Civil War had many important events. Name one.",
+    "acceptedAnswers": [
+      "Battle of Fort Sumter",
+      "Fort Sumter",
+      "Emancipation Proclamation",
+      "Battle of Vicksburg",
+      "Vicksburg",
+      "Battle of Gettysburg",
+      "Gettysburg",
+      "Sherman's March",
+      "Surrender at Appomattox",
+      "Appomattox",
+      "Battle of Antietam",
+      "Antietam",
+      "Sharpsburg",
+      "Lincoln was assassinated"
+    ],
+    "extraInfo": "Fort Sumter started the war; Gettysburg, Vicksburg, and Appomattox were turning points.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 10,
+    "studyGuideTitle": "The Civil War",
+    "studyGuidePage": 58,
+    "officialAnswers": [
+      "(Battle of) Fort Sumter",
+      "Emancipation Proclamation",
+      "(Battle of) Vicksburg",
+      "(Battle of) Gettysburg",
+      "Sherman’s March",
+      "(Surrender at) Appomattox",
+      "(Battle of) Antietam/Sharpsburg",
+      "Lincoln was assassinated."
+    ]
+  },
+  {
+    "id": 94,
+    "section": "AMERICAN HISTORY",
+    "topic": "1800s",
+    "question": "Abraham Lincoln is famous for many things. Name one.",
+    "acceptedAnswers": [
+      "Freed the slaves",
+      "Emancipation Proclamation",
+      "Saved the Union",
+      "Preserved the Union",
+      "Led the United States during the Civil War",
+      "16th president of the United States",
+      "Delivered the Gettysburg Address"
+    ],
+    "extraInfo": "Lincoln preserved the Union, issued the Emancipation Proclamation, and gave the Gettysburg Address.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 10,
+    "studyGuideTitle": "The Civil War",
+    "studyGuidePage": 58,
+    "officialAnswers": [
+      "Freed the slaves (Emancipation Proclamation)",
+      "Saved (or preserved) the Union",
+      "Led the United States during the Civil War",
+      "16th president of the United States",
+      "Delivered the Gettysburg Address"
+    ]
+  },
+  {
+    "id": 95,
+    "section": "AMERICAN HISTORY",
+    "topic": "1800s",
+    "question": "What did the Emancipation Proclamation do?",
+    "acceptedAnswers": [
+      "Freed the slaves",
+      "Freed slaves in the Confederacy",
+      "Freed slaves in the Confederate states",
+      "Freed slaves in most Southern states"
+    ],
+    "extraInfo": "In 1863 Lincoln declared freedom for enslaved people in Confederate-held territory.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 10,
+    "studyGuideTitle": "The Civil War",
+    "studyGuidePage": 58,
+    "officialAnswers": [
+      "Freed the slaves",
+      "Freed slaves in the Confederacy",
+      "Freed slaves in the Confederate states",
+      "Freed slaves in most Southern states"
+    ]
+  },
+  {
+    "id": 96,
+    "section": "AMERICAN HISTORY",
+    "topic": "1800s",
+    "question": "What U.S. war ended slavery?",
+    "acceptedAnswers": [
+      "The Civil War",
+      "Civil War"
+    ],
+    "extraInfo": "Union victory and the 13th Amendment ended legal slavery in the United States.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 10,
+    "studyGuideTitle": "The Civil War",
+    "studyGuidePage": 58,
+    "officialAnswers": [
+      "The Civil War"
+    ]
+  },
+  {
+    "id": 97,
+    "section": "AMERICAN HISTORY",
+    "topic": "1800s",
+    "question": "What amendment says all persons born or naturalized in the United States, and subject to the jurisdiction thereof, are U.S. citizens?",
+    "acceptedAnswers": [
+      "14th Amendment",
+      "Fourteenth Amendment",
+      "The 14th Amendment"
+    ],
+    "extraInfo": "The 14th Amendment (1868) defined birthright citizenship and equal protection.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 10,
+    "studyGuideTitle": "The Civil War",
+    "studyGuidePage": 58,
+    "officialAnswers": [
+      "14th Amendment"
+    ]
+  },
+  {
+    "id": 98,
+    "section": "AMERICAN HISTORY",
+    "topic": "1800s",
+    "question": "When did all men get the right to vote?",
+    "acceptedAnswers": [
+      "After the Civil War",
+      "During Reconstruction",
+      "15th Amendment",
+      "With the 15th Amendment",
+      "1870"
+    ],
+    "extraInfo": "The 15th Amendment (1870) barred race-based denial of the vote for men.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 10,
+    "studyGuideTitle": "The Civil War",
+    "studyGuidePage": 58,
+    "officialAnswers": [
+      "After the Civil War",
+      "During Reconstruction",
+      "(With the) 15th Amendment",
+      "1870"
+    ]
+  },
+  {
+    "id": 99,
+    "section": "AMERICAN HISTORY",
+    "topic": "1800s",
+    "question": "Name one leader of the women’s rights movement in the 1800s.",
+    "acceptedAnswers": [
+      "Susan B. Anthony",
+      "Anthony",
+      "Elizabeth Cady Stanton",
+      "Stanton",
+      "Sojourner Truth",
+      "Harriet Tubman",
+      "Tubman",
+      "Lucretia Mott",
+      "Mott",
+      "Lucy Stone"
+    ],
+    "extraInfo": "Leaders such as Stanton and Anthony organized for suffrage and equality.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 10,
+    "studyGuideTitle": "The Civil War",
+    "studyGuidePage": 58,
+    "officialAnswers": [
+      "Susan B. Anthony",
+      "Elizabeth Cady Stanton",
+      "Sojourner Truth",
+      "Harriet Tubman",
+      "Lucretia Mott",
+      "Lucy Stone"
+    ]
+  },
+  {
+    "id": 100,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "Name one war fought by the United States in the 1900s.",
+    "acceptedAnswers": [
+      "World War I",
+      "World War 1",
+      "World War II",
+      "World War 2",
+      "Korean War",
+      "Vietnam War",
+      "Persian Gulf War",
+      "Gulf War"
+    ],
+    "extraInfo": "The United States fought in both world wars, Korea, Vietnam, and the 1991 Gulf War.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "World War I",
+      "World War II",
+      "Korean War",
+      "Vietnam War",
+      "(Persian) Gulf War"
+    ]
+  },
+  {
+    "id": 101,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "Why did the United States enter World War I?",
+    "acceptedAnswers": [
+      "Because Germany attacked U.S. ships",
+      "Because Germany attacked US civilian ships",
+      "To support the Allied Powers",
+      "To oppose the Central Powers"
+    ],
+    "extraInfo": "U-boat attacks on U.S. ships and support for the Allies led Congress to declare war in 1917.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "Because Germany attacked U.S. (civilian) ships",
+      "To support the Allied Powers (England, France, Italy, and Russia)",
+      "To oppose the Central Powers (Germany, Austria-Hungary, the Ottoman Empire, and Bulgaria)"
+    ]
+  },
+  {
+    "id": 102,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "When did all women get the right to vote?",
+    "acceptedAnswers": [
+      "1920",
+      "After World War I",
+      "19th Amendment",
+      "With the 19th Amendment"
+    ],
+    "extraInfo": "The 19th Amendment (1920) guaranteed women the right to vote.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "1920",
+      "After World War I",
+      "(With the) 19th Amendment"
+    ]
+  },
+  {
+    "id": 103,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "What was the Great Depression?",
+    "acceptedAnswers": [
+      "Longest economic recession in modern history",
+      "The longest economic recession in modern history"
+    ],
+    "extraInfo": "The Great Depression was a severe, long economic collapse that began in 1929.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "Longest economic recession in modern history"
+    ]
+  },
+  {
+    "id": 104,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "When did the Great Depression start?",
+    "acceptedAnswers": [
+      "The Great Crash",
+      "The Great Crash 1929",
+      "Stock market crash of 1929",
+      "1929"
+    ],
+    "extraInfo": "It is marked by the 1929 stock market crash, also called the Great Crash.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "The Great Crash (1929)",
+      "Stock market crash of 1929"
+    ]
+  },
+  {
+    "id": 105,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "Who was president during the Great Depression and World War II?",
+    "acceptedAnswers": [
+      "Franklin Roosevelt",
+      "Franklin D. Roosevelt",
+      "FDR",
+      "Roosevelt"
+    ],
+    "extraInfo": "Franklin D. Roosevelt led the New Deal and wartime government from 1933 to 1945.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "(Franklin) Roosevelt"
+    ]
+  },
+  {
+    "id": 106,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "Why did the United States enter World War II?",
+    "acceptedAnswers": [
+      "Pearl Harbor",
+      "Bombing of Pearl Harbor",
+      "Japanese attacked Pearl Harbor",
+      "To support the Allied Powers",
+      "To oppose the Axis Powers"
+    ],
+    "extraInfo": "Japan’s attack on Pearl Harbor on December 7, 1941, brought the U.S. into the war.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "(Bombing of) Pearl Harbor",
+      "Japanese attacked Pearl Harbor",
+      "To support the Allied Powers (England, France, and Russia)",
+      "To oppose the Axis Powers (Germany, Italy, and Japan)"
+    ]
+  },
+  {
+    "id": 107,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "Dwight Eisenhower is famous for many things. Name one.",
+    "acceptedAnswers": [
+      "General during World War II",
+      "President at the end of the Korean War",
+      "President during the Korean War",
+      "34th president of the United States",
+      "Signed the Federal-Aid Highway Act of 1956",
+      "Created the Interstate System"
+    ],
+    "extraInfo": "Eisenhower commanded Allied forces in Europe and later created the Interstate Highway System.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "General during World War II",
+      "President at the end of (during) the Korean War",
+      "34th president of the United States",
+      "Signed the Federal-Aid Highway Act of 1956 (Created the Interstate System)"
+    ]
+  },
+  {
+    "id": 108,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "Who was the United States’ main rival during the Cold War?",
+    "acceptedAnswers": [
+      "Soviet Union",
+      "USSR",
+      "Russia"
+    ],
+    "extraInfo": "After World War II the U.S. and the Soviet Union competed worldwide for decades.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "Soviet Union",
+      "USSR",
+      "Russia"
+    ]
+  },
+  {
+    "id": 109,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "During the Cold War, what was one main concern of the United States?",
+    "acceptedAnswers": [
+      "Communism",
+      "Nuclear war"
+    ],
+    "extraInfo": "U.S. policy focused on containing communism and avoiding nuclear war.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "Communism",
+      "Nuclear war"
+    ]
+  },
+  {
+    "id": 110,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "Why did the United States enter the Korean War?",
+    "acceptedAnswers": [
+      "To stop the spread of communism"
+    ],
+    "extraInfo": "In 1950 the U.S. joined a U.N. effort to stop communist North Korea’s invasion of the South.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "To stop the spread of communism"
+    ]
+  },
+  {
+    "id": 111,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "Why did the United States enter the Vietnam War?",
+    "acceptedAnswers": [
+      "To stop the spread of communism"
+    ],
+    "extraInfo": "U.S. leaders saw Vietnam as part of a wider effort to contain communism in Asia.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "To stop the spread of communism"
+    ]
+  },
+  {
+    "id": 112,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "What did the civil rights movement do?",
+    "acceptedAnswers": [
+      "Fought to end racial discrimination"
+    ],
+    "extraInfo": "The movement used protests and the courts to challenge segregation and racial discrimination.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "Fought to end racial discrimination"
+    ]
+  },
+  {
+    "id": 113,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "Martin Luther King, Jr. is famous for many things. Name one.",
+    "acceptedAnswers": [
+      "Fought for civil rights",
+      "Worked for equality for all Americans",
+      "Worked to ensure that people would not be judged by the color of their skin, but by the content of their character"
+    ],
+    "extraInfo": "King led nonviolent protests for civil rights and gave the “I Have a Dream” speech.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "Fought for civil rights",
+      "Worked for equality for all Americans",
+      "Worked to ensure that people would “not be judged by the color of their skin, but by the content of their character”"
+    ]
+  },
+  {
+    "id": 114,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "Why did the United States enter the Persian Gulf War?",
+    "acceptedAnswers": [
+      "To force the Iraqi military from Kuwait"
+    ],
+    "extraInfo": "In 1991 a U.S.-led coalition expelled Iraqi forces from Kuwait.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "To force the Iraqi military from Kuwait"
+    ]
+  },
+  {
+    "id": 115,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "What major event happened on September 11, 2001 in the United States?",
+    "acceptedAnswers": [
+      "Terrorists attacked the United States",
+      "Terrorists took over two planes and crashed them into the World Trade Center in New York City",
+      "Terrorists took over a plane and crashed into the Pentagon in Arlington, Virginia",
+      "Terrorists took over a plane originally aimed at Washington, D.C., and crashed in a field in Pennsylvania",
+      "September 11",
+      "9/11",
+      "9-11",
+      "Attack on the World Trade Center",
+      "Pentagon attack"
+    ],
+    "extraInfo": "Al-Qaeda hijackers attacked the World Trade Center and the Pentagon; a fourth plane crashed in Pennsylvania.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "Terrorists attacked the United States",
+      "Terrorists took over two planes and crashed them into the World Trade Center in New York City",
+      "Terrorists took over a plane and crashed into the Pentagon in Arlington, Virginia",
+      "Terrorists took over a plane originally aimed at Washington, D.C., and crashed in a field in Pennsylvania"
+    ]
+  },
+  {
+    "id": 116,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "Name one U.S. military conflict after the September 11, 2001 attacks.",
+    "acceptedAnswers": [
+      "Global War on Terror",
+      "War on Terror",
+      "War in Afghanistan",
+      "War in Iraq"
+    ],
+    "extraInfo": "The U.S. fought in Afghanistan and Iraq as part of the post-9/11 War on Terror.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "(Global) War on Terror",
+      "War in Afghanistan",
+      "War in Iraq"
+    ]
+  },
+  {
+    "id": 117,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "Name one American Indian tribe in the United States.",
+    "acceptedAnswers": [
+      "Apache",
+      "Blackfeet",
+      "Cayuga",
+      "Cherokee",
+      "Cheyenne",
+      "Chippewa",
+      "Choctaw",
+      "Creek",
+      "Crow",
+      "Hopi",
+      "Huron",
+      "Inupiat",
+      "Lakota",
+      "Mohawk",
+      "Mohegan",
+      "Navajo",
+      "Oneida",
+      "Onondaga",
+      "Pueblo",
+      "Seminole",
+      "Seneca",
+      "Shawnee",
+      "Sioux",
+      "Teton",
+      "Tuscarora"
+    ],
+    "extraInfo": "Hundreds of tribal nations are in the United States today. USCIS lists many acceptable names.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 7,
+    "studyGuideTitle": "Early American History",
+    "studyGuidePage": 43,
+    "officialAnswers": [
+      "Apache",
+      "Blackfeet",
+      "Cayuga",
+      "Cherokee",
+      "Cheyenne",
+      "Chippewa",
+      "Choctaw",
+      "Creek",
+      "Crow",
+      "Hopi",
+      "Huron",
+      "Inupiat",
+      "Lakota",
+      "Mohawk",
+      "Mohegan",
+      "Navajo",
+      "Oneida",
+      "Onondaga",
+      "Pueblo",
+      "Seminole",
+      "Seneca",
+      "Shawnee",
+      "Sioux",
+      "Teton",
+      "Tuscarora"
+    ]
+  },
+  {
+    "id": 118,
+    "section": "AMERICAN HISTORY",
+    "topic": "Recent American History",
+    "question": "Name one example of an American innovation.",
+    "acceptedAnswers": [
+      "Light bulb",
+      "Automobile",
+      "Cars",
+      "Internal combustion engine",
+      "Skyscrapers",
+      "Airplane",
+      "Assembly line",
+      "Landing on the moon",
+      "Integrated circuit",
+      "IC"
+    ],
+    "extraInfo": "U.S. innovations include the light bulb, assembly line, airplane, and the moon landing.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 11,
+    "studyGuideTitle": "American History: 1900 – 2001",
+    "studyGuidePage": 62,
+    "officialAnswers": [
+      "Light bulb",
+      "Automobile (cars, internal combustion engine)",
+      "Skyscrapers",
+      "Airplane",
+      "Assembly line",
+      "Landing on the moon",
+      "Integrated circuit (IC)"
+    ]
+  },
+  {
+    "id": 119,
+    "section": "SYMBOLS AND HOLIDAYS",
+    "topic": "Symbols",
+    "question": "What is the capital of the United States?",
+    "acceptedAnswers": [
+      "Washington, D.C.",
+      "Washington DC",
+      "Washington D.C.",
+      "Washington"
+    ],
+    "extraInfo": "The federal capital has been Washington, D.C., since 1800.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 12,
+    "studyGuideTitle": "American Symbols and Holidays",
+    "studyGuidePage": 69,
+    "officialAnswers": [
+      "Washington, D.C."
+    ]
+  },
+  {
+    "id": 120,
+    "section": "SYMBOLS AND HOLIDAYS",
+    "topic": "Symbols",
+    "question": "Where is the Statue of Liberty?",
+    "acceptedAnswers": [
+      "New York",
+      "New York Harbor",
+      "Liberty Island",
+      "New Jersey",
+      "Near New York City",
+      "Hudson River",
+      "On the Hudson"
+    ],
+    "extraInfo": "The statue stands on Liberty Island in New York Harbor, a gift from France in 1886.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 12,
+    "studyGuideTitle": "American Symbols and Holidays",
+    "studyGuidePage": 69,
+    "officialAnswers": [
+      "New York (Harbor)",
+      "Liberty Island [Also acceptable are New Jersey, near New York City, and on the Hudson (River).]"
+    ]
+  },
+  {
+    "id": 121,
+    "section": "SYMBOLS AND HOLIDAYS",
+    "topic": "Symbols",
+    "question": "Why does the flag have 13 stripes?",
+    "acceptedAnswers": [
+      "Because there were 13 original colonies",
+      "Because the stripes represent the original colonies",
+      "13 original colonies",
+      "Original colonies"
+    ],
+    "extraInfo": "The 13 stripes honor the original colonies that became the first states.",
+    "starred6520": true,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 12,
+    "studyGuideTitle": "American Symbols and Holidays",
+    "studyGuidePage": 69,
+    "officialAnswers": [
+      "(Because there were) 13 original colonies",
+      "(Because the stripes) represent the original colonies"
+    ]
+  },
+  {
+    "id": 122,
+    "section": "SYMBOLS AND HOLIDAYS",
+    "topic": "Symbols",
+    "question": "Why does the flag have 50 stars?",
+    "acceptedAnswers": [
+      "Because there is one star for each state",
+      "Because each star represents a state",
+      "Because there are 50 states",
+      "One star for each state",
+      "50 states"
+    ],
+    "extraInfo": "Each star stands for one of the 50 states.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 12,
+    "studyGuideTitle": "American Symbols and Holidays",
+    "studyGuidePage": 69,
+    "officialAnswers": [
+      "(Because there is) one star for each state",
+      "(Because) each star represents a state",
+      "(Because there are) 50 states"
+    ]
+  },
+  {
+    "id": 123,
+    "section": "SYMBOLS AND HOLIDAYS",
+    "topic": "Symbols",
+    "question": "What is the name of the national anthem?",
+    "acceptedAnswers": [
+      "The Star-Spangled Banner",
+      "Star-Spangled Banner",
+      "Star Spangled Banner"
+    ],
+    "extraInfo": "Francis Scott Key wrote the poem after the 1814 bombardment of Fort McHenry.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 12,
+    "studyGuideTitle": "American Symbols and Holidays",
+    "studyGuidePage": 69,
+    "officialAnswers": [
+      "The Star-Spangled Banner"
+    ]
+  },
+  {
+    "id": 124,
+    "section": "SYMBOLS AND HOLIDAYS",
+    "topic": "Symbols",
+    "question": "The Nation’s first motto was “E Pluribus Unum.” What does that mean?",
+    "acceptedAnswers": [
+      "Out of many, one",
+      "We all become one"
+    ],
+    "extraInfo": "The Latin motto means many people and states form one nation.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 12,
+    "studyGuideTitle": "American Symbols and Holidays",
+    "studyGuidePage": 69,
+    "officialAnswers": [
+      "Out of many, one",
+      "We all become one"
+    ]
+  },
+  {
+    "id": 125,
+    "section": "SYMBOLS AND HOLIDAYS",
+    "topic": "Holidays",
+    "question": "What is Independence Day?",
+    "acceptedAnswers": [
+      "A holiday to celebrate U.S. independence from Britain",
+      "A holiday to celebrate US independence",
+      "The country's birthday",
+      "Independence Day",
+      "July 4",
+      "The Fourth of July"
+    ],
+    "extraInfo": "July 4 celebrates the 1776 Declaration of Independence.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 12,
+    "studyGuideTitle": "American Symbols and Holidays",
+    "studyGuidePage": 69,
+    "officialAnswers": [
+      "A holiday to celebrate U.S. independence (from Britain)",
+      "The country’s birthday"
+    ]
+  },
+  {
+    "id": 126,
+    "section": "SYMBOLS AND HOLIDAYS",
+    "topic": "Holidays",
+    "question": "Name three national U.S. holidays.",
+    "acceptedAnswers": [
+      "New Year's Day",
+      "Martin Luther King, Jr. Day",
+      "Martin Luther King Jr Day",
+      "Presidents Day",
+      "Washington's Birthday",
+      "Memorial Day",
+      "Juneteenth",
+      "Independence Day",
+      "Labor Day",
+      "Columbus Day",
+      "Veterans Day",
+      "Thanksgiving Day",
+      "Thanksgiving",
+      "Christmas Day",
+      "Christmas"
+    ],
+    "extraInfo": "Federal holidays honor historic events and people, from New Year’s Day to Christmas.",
+    "starred6520": true,
+    "answerKind": "all_n",
+    "minRequired": 3,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 12,
+    "studyGuideTitle": "American Symbols and Holidays",
+    "studyGuidePage": 69,
+    "officialAnswers": [
+      "New Year’s Day",
+      "Martin Luther King, Jr. Day",
+      "Presidents Day (Washington’s Birthday)",
+      "Memorial Day",
+      "Juneteenth",
+      "Independence Day",
+      "Labor Day",
+      "Columbus Day",
+      "Veterans Day",
+      "Thanksgiving Day",
+      "Christmas Day"
+    ]
+  },
+  {
+    "id": 127,
+    "section": "SYMBOLS AND HOLIDAYS",
+    "topic": "Holidays",
+    "question": "What is Memorial Day?",
+    "acceptedAnswers": [
+      "A holiday to honor soldiers who died in military service",
+      "Honors soldiers who died",
+      "Honors the war dead"
+    ],
+    "extraInfo": "Memorial Day (the last Monday in May) honors those who died in U.S. military service.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 12,
+    "studyGuideTitle": "American Symbols and Holidays",
+    "studyGuidePage": 69,
+    "officialAnswers": [
+      "A holiday to honor soldiers who died in military service"
+    ]
+  },
+  {
+    "id": 128,
+    "section": "SYMBOLS AND HOLIDAYS",
+    "topic": "Holidays",
+    "question": "What is Veterans Day?",
+    "acceptedAnswers": [
+      "A holiday to honor people in the U.S. military",
+      "A holiday to honor people in the military",
+      "A holiday to honor people who have served in the U.S. military",
+      "A holiday to honor people who have served in the military",
+      "Honors veterans",
+      "Honors people who served in the military"
+    ],
+    "extraInfo": "Veterans Day (November 11) honors all who have served in the U.S. armed forces.",
+    "starred6520": false,
+    "answerKind": "any_one",
+    "minRequired": 1,
+    "currentOfficial": false,
+    "stateSpecific": false,
+    "stateField": null,
+    "studyGuideChapter": 12,
+    "studyGuideTitle": "American Symbols and Holidays",
+    "studyGuidePage": 69,
+    "officialAnswers": [
+      "A holiday to honor people in the (U.S.) military",
+      "A holiday to honor people who have served (in the U.S. military)"
+    ]
+  }
+]
