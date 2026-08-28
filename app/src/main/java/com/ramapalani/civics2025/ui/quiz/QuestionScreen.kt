@@ -22,6 +22,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.ramapalani.civics2025.domain.AnswerKind
@@ -65,11 +66,12 @@ fun QuestionScreen(
         Text(
             "${state.mode.name.lowercase().replaceFirstChar { it.titlecase() }}  ·  ${state.index + 1} / ${state.questions.size}",
             style = MaterialTheme.typography.labelLarge,
+            modifier = Modifier.testTag("progressLabel"),
         )
         if (state.combo >= 2) {
             Text("Combo x${state.combo} — keep the streak going!", color = DeepGreen, fontWeight = FontWeight.Bold)
         }
-        Text(question.question, style = MaterialTheme.typography.headlineSmall)
+        Text(question.question, style = MaterialTheme.typography.headlineSmall, modifier = Modifier.testTag("questionText"))
         Text("${question.section} · ${question.topic}", style = MaterialTheme.typography.bodyMedium)
         if (question.minRequired > 1) {
             Text("Name ${question.minRequired}. Separate answers with a comma or “and”.")
@@ -101,7 +103,7 @@ fun QuestionScreen(
             OutlinedTextField(
                 value = state.input,
                 onValueChange = viewModel::onInput,
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().testTag("answerInput"),
                 minLines = 2,
                 label = { Text("Type your answer") },
                 enabled = state.lastGrade == null,
@@ -109,7 +111,7 @@ fun QuestionScreen(
             Button(
                 onClick = { viewModel.submit() },
                 enabled = state.lastGrade == null && state.input.isNotBlank(),
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().testTag("checkButton"),
             ) { Text("Check") }
         }
 
@@ -126,6 +128,7 @@ fun QuestionScreen(
                             if (grade.correct) "Correct! +${grade.practicePoints}" else "Not quite.",
                             color = if (grade.correct) DeepGreen else FlagRed,
                             style = MaterialTheme.typography.titleLarge,
+                            modifier = Modifier.testTag("gradeResult"),
                         )
                         Text("Accepted answers", fontWeight = FontWeight.SemiBold)
                         viewModel.acceptedAnswers().forEach { Text("• $it") }
@@ -148,7 +151,7 @@ fun QuestionScreen(
                                 OutlinedButton(onClick = { viewModel.markReview(true) }) { Text("Needs review") }
                             }
                         }
-                        Button(onClick = viewModel::next, modifier = Modifier.fillMaxWidth()) {
+                        Button(onClick = viewModel::next, modifier = Modifier.fillMaxWidth().testTag("nextButton")) {
                             Text(if (state.index >= state.questions.lastIndex) "Finish" else "Next")
                         }
                     }
@@ -156,7 +159,7 @@ fun QuestionScreen(
             }
         }
 
-        TextButton(onClick = onExit) { Text("Exit") }
+        TextButton(onClick = onExit, modifier = Modifier.testTag("exitButton")) { Text("Exit") }
     }
 }
 
@@ -183,6 +186,6 @@ private fun ResultScreen(state: QuizUiState, onExit: () -> Unit) {
             }
         }
         Text("Typed answers earn 1.0. Multiple choice earns 0.6 when correct.")
-        Button(onClick = onExit, modifier = Modifier.fillMaxWidth()) { Text("Home") }
+        Button(onClick = onExit, modifier = Modifier.fillMaxWidth().testTag("homeButton")) { Text("Home") }
     }
 }

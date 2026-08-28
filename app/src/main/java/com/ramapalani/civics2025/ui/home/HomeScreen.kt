@@ -20,6 +20,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -57,22 +58,22 @@ fun HomeScreen(
                 Text("Missed questions ready for review: ${ui.weakCount}")
             }
         }
-        Button(onClick = { onLearn(null) }, modifier = Modifier.fillMaxWidth()) {
+        Button(onClick = { onLearn(null) }, modifier = Modifier.fillMaxWidth().testTag("learnModeButton")) {
             Text("Learn mode")
         }
-        Button(onClick = onTest, modifier = Modifier.fillMaxWidth()) {
+        Button(onClick = onTest, modifier = Modifier.fillMaxWidth().testTag("testModeButton")) {
             Text(if (ui.prefs.starred6520) "Test (10 questions, 65/20)" else "Test (20 questions)")
         }
-        OutlinedButton(onClick = onDaily, modifier = Modifier.fillMaxWidth()) {
+        OutlinedButton(onClick = onDaily, modifier = Modifier.fillMaxWidth().testTag("dailyQuestionButton")) {
             Text("Today’s question")
         }
         OutlinedButton(onClick = onTextbook, modifier = Modifier.fillMaxWidth()) {
             Text("One Nation, One People textbook")
         }
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            TextButton(onClick = onHistory) { Text("History") }
-            TextButton(onClick = onSettings) { Text("Settings") }
-            TextButton(onClick = onAbout) { Text("About & privacy") }
+            TextButton(onClick = onHistory, modifier = Modifier.testTag("historyButton")) { Text("History") }
+            TextButton(onClick = onSettings, modifier = Modifier.testTag("settingsButton")) { Text("Settings") }
+            TextButton(onClick = onAbout, modifier = Modifier.testTag("aboutButton")) { Text("About & privacy") }
         }
         Text("Civics map", style = MaterialTheme.typography.titleMedium)
         ui.mastery.forEach { section ->
