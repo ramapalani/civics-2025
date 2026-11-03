@@ -25,6 +25,9 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -36,9 +39,8 @@ import kotlinx.coroutines.launch
 @Composable
 fun SettingsScreen(app: CivicsApplication, onBack: () -> Unit, onAbout: () -> Unit) {
     val context = LocalContext.current
-    val prefs by app.preferences.prefs.collectAsState(
-        initial = com.ramapalani.civics2025.data.UserPrefs(),
-    )
+    val loadedPrefs by app.preferences.prefs.collectAsState(initial = null)
+    val prefs = loadedPrefs ?: com.ramapalani.civics2025.data.UserPrefs()
     val scope = rememberCoroutineScope()
     val permission = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { }
 
@@ -48,6 +50,10 @@ fun SettingsScreen(app: CivicsApplication, onBack: () -> Unit, onAbout: () -> Un
             val next = update(prefs)
             DailyQuestionWorker.schedule(app, next.dailyHour, next.notificationsOn)
         }
+    }
+
+    fun saveOfficials(update: (com.ramapalani.civics2025.domain.LocalOfficials) -> com.ramapalani.civics2025.domain.LocalOfficials) {
+        scope.launch { app.preferences.update { it.copy(officials = update(it.officials)) } }
     }
 
     Column(
@@ -129,10 +135,10 @@ fun SettingsScreen(app: CivicsApplication, onBack: () -> Unit, onAbout: () -> Un
         ) {
             Text("Supreme Court justices (supremecourt.gov)")
         }
-        OutlinedTextField(prefs.officials.president, { v -> save { it.copy(officials = it.officials.copy(president = v)) } }, label = { Text("President") }, modifier = Modifier.fillMaxWidth())
-        OutlinedTextField(prefs.officials.vicePresident, { v -> save { it.copy(officials = it.officials.copy(vicePresident = v)) } }, label = { Text("Vice President") }, modifier = Modifier.fillMaxWidth())
-        OutlinedTextField(prefs.officials.speaker, { v -> save { it.copy(officials = it.officials.copy(speaker = v)) } }, label = { Text("Speaker of the House") }, modifier = Modifier.fillMaxWidth())
-        OutlinedTextField(prefs.officials.chiefJustice, { v -> save { it.copy(officials = it.officials.copy(chiefJustice = v)) } }, label = { Text("Chief Justice") }, modifier = Modifier.fillMaxWidth())
+        if (loadedPrefs != null) OfficialField("President", prefs.officials.president) { v -> saveOfficials { it.copy(president = v) } }
+        if (loadedPrefs != null) OfficialField("Vice President", prefs.officials.vicePresident) { v -> saveOfficials { it.copy(vicePresident = v) } }
+        if (loadedPrefs != null) OfficialField("Speaker of the House", prefs.officials.speaker) { v -> saveOfficials { it.copy(speaker = v) } }
+        if (loadedPrefs != null) OfficialField("Chief Justice", prefs.officials.chiefJustice) { v -> saveOfficials { it.copy(chiefJustice = v) } }
         Text("Your state officials (used for senator, representative, governor, capital)")
         Text(
             "Look up your U.S. senator and House representative by address on congress.gov, then type the names here.",
@@ -149,11 +155,11 @@ fun SettingsScreen(app: CivicsApplication, onBack: () -> Unit, onAbout: () -> Un
         ) {
             Text("Find senator and representative (congress.gov)")
         }
-        OutlinedTextField(prefs.officials.stateName, { v -> save { it.copy(officials = it.officials.copy(stateName = v)) } }, label = { Text("State") }, modifier = Modifier.fillMaxWidth())
-        OutlinedTextField(prefs.officials.senator, { v -> save { it.copy(officials = it.officials.copy(senator = v)) } }, label = { Text("U.S. senator") }, modifier = Modifier.fillMaxWidth())
-        OutlinedTextField(prefs.officials.representative, { v -> save { it.copy(officials = it.officials.copy(representative = v)) } }, label = { Text("U.S. representative") }, modifier = Modifier.fillMaxWidth())
-        OutlinedTextField(prefs.officials.governor, { v -> save { it.copy(officials = it.officials.copy(governor = v)) } }, label = { Text("Governor") }, modifier = Modifier.fillMaxWidth())
-        OutlinedTextField(prefs.officials.stateCapital, { v -> save { it.copy(officials = it.officials.copy(stateCapital = v)) } }, label = { Text("State capital") }, modifier = Modifier.fillMaxWidth())
+        if (loadedPrefs != null) OfficialField("State", prefs.officials.stateName) { v -> saveOfficials { it.copy(stateName = v) } }
+        if (loadedPrefs != null) OfficialField("U.S. senator", prefs.officials.senator) { v -> saveOfficials { it.copy(senator = v) } }
+        if (loadedPrefs != null) OfficialField("U.S. representative", prefs.officials.representative) { v -> saveOfficials { it.copy(representative = v) } }
+        if (loadedPrefs != null) OfficialField("Governor", prefs.officials.governor) { v -> saveOfficials { it.copy(governor = v) } }
+        if (loadedPrefs != null) OfficialField("State capital", prefs.officials.stateCapital) { v -> saveOfficials { it.copy(stateCapital = v) } }
         Text("Keep results ${prefs.retentionDays} days, max ${prefs.maxAttempts} answers.")
         OutlinedButton(onClick = {
             scope.launch { app.results.enforceRetention(prefs.retentionDays, prefs.maxAttempts) }
@@ -177,4 +183,17 @@ private fun RowSwitch(label: String, checked: Boolean, onChange: (Boolean) -> Un
         Text(label, modifier = Modifier.weight(1f).padding(end = 12.dp))
         Switch(checked = checked, onCheckedChange = onChange)
     }
+}
+
+/** Keeps its own text state so typing never waits on the DataStore round trip. */
+@Composable
+private fun OfficialField(label: String, initial: String, onChange: (String) -> Unit) {
+    var text by rememberSaveable { mutableStateOf(initial) }
+    OutlinedTextField(
+        value = text,
+        onValueChange = { text = it; onChange(it) },
+        label = { Text(label) },
+        singleLine = true,
+        modifier = Modifier.fillMaxWidth(),
+    )
 }
