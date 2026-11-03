@@ -31,7 +31,6 @@ object AnswerMatcher {
         "donald john trump" to "donald trump",
         "john g roberts jr" to "john roberts",
         "john roberts junior" to "john roberts",
-        "star spangled banner" to "starspangled banner",
         "washington dc" to "washington dc",
         "washington d c" to "washington dc",
         "fourth of july" to "independence day",
@@ -45,6 +44,42 @@ object AnswerMatcher {
         "9 11 2001" to "september 11 2001",
         "sept 11 2001" to "september 11 2001",
         "nine eleven" to "september 11 2001",
+    )
+
+    private val stateAbbreviations = mapOf(
+        "al" to "alabama", "ak" to "alaska", "az" to "arizona", "ar" to "arkansas",
+        "ca" to "california", "co" to "colorado", "ct" to "connecticut", "de" to "delaware",
+        "fl" to "florida", "ga" to "georgia", "hi" to "hawaii", "id" to "idaho",
+        "il" to "illinois", "in" to "indiana", "ia" to "iowa", "ks" to "kansas",
+        "ky" to "kentucky", "la" to "louisiana", "me" to "maine", "md" to "maryland",
+        "ma" to "massachusetts", "mi" to "michigan", "mn" to "minnesota", "ms" to "mississippi",
+        "mo" to "missouri", "mt" to "montana", "ne" to "nebraska", "nv" to "nevada",
+        "nh" to "new hampshire", "nj" to "new jersey", "nm" to "new mexico", "ny" to "new york",
+        "nc" to "north carolina", "nd" to "north dakota", "oh" to "ohio", "ok" to "oklahoma",
+        "or" to "oregon", "pa" to "pennsylvania", "ri" to "rhode island", "sc" to "south carolina",
+        "sd" to "south dakota", "tn" to "tennessee", "tx" to "texas", "ut" to "utah",
+        "vt" to "vermont", "va" to "virginia", "wa" to "washington", "wv" to "west virginia",
+        "wi" to "wisconsin", "wy" to "wyoming",
+    )
+
+    /** State codes that are also ordinary words; the word reading wins. */
+    private val ambiguousStateCodes = setOf("in", "or", "me", "la", "oh", "hi", "ok", "id")
+
+    private val initialisms = mapOf(
+        "fdr" to "franklin roosevelt",
+        "jfk" to "john f kennedy",
+        "lbj" to "lyndon b johnson",
+        "teddy roosevelt" to "theodore roosevelt",
+        "ike" to "dwight d eisenhower",
+    )
+
+    /** Words that rule a capitalized phrase out of being a personal name. */
+    private val nonNameWords = setOf(
+        "day", "birthday", "year", "years", "eve", "war", "court", "house", "senate",
+        "state", "states", "united", "america", "american", "constitution", "congress",
+        "president", "party", "city", "island", "north", "south", "east", "west", "new",
+        "bill", "rights", "act", "amendment", "flag", "banner", "independence", "memorial",
+        "labor", "christmas", "thanksgiving", "veterans",
     )
 
     private val genericTokens = setOf("day", "birthday", "jr", "junior", "sr", "senior")
@@ -137,7 +172,8 @@ object AnswerMatcher {
             for (answer in accepted) {
                 val score = similarity(userNorm, normalize(answer), expandVariants(answer))
                 if (score > best.similarity) {
-                    best = MatchResult(score >= 0.78, if (score >= 0.78) listOf(answer) else emptyList(), score)
+                    val hit = score >= MatchResult.ACCEPT_THRESHOLD
+                    best = MatchResult(hit, if (hit) listOf(answer) else emptyList(), score)
                 }
             }
         }
@@ -149,7 +185,11 @@ object AnswerMatcher {
         val fromBag = collectMatchesFromBag(accepted, userInput)
         val matched = uniqueFamilies(fromParts + fromBag)
         val correct = matched.size >= minRequired
-        return MatchResult(correct, matched, if (matched.isEmpty()) 0.0 else 1.0)
+        // Report real coverage ("2 of 3") rather than a flat pass/fail, so a partial answer is visible.
+        val similarity = if (minRequired <= 0) 0.0 else {
+            (matched.size.toDouble() / minRequired).coerceAtMost(1.0)
+        }
+        return MatchResult(correct, matched, similarity, minRequired)
     }
 
     private fun collectMatches(accepted: List<String>, parts: List<String>): List<String> {
@@ -198,14 +238,14 @@ object AnswerMatcher {
                 bestIdx = index
             }
         }
-        return if (bestIdx >= 0 && bestScore >= 0.78) bestIdx to accepted[bestIdx] else null
+        return if (bestIdx >= 0 && bestScore >= MatchResult.ACCEPT_THRESHOLD) bestIdx to accepted[bestIdx] else null
     }
 
     private fun markFamily(accepted: List<String>, chosen: String, used: MutableSet<Int>) {
         accepted.forEachIndexed { index, answer ->
             if (index in used) return@forEachIndexed
             val score = similarity(normalize(chosen), normalize(answer), expandVariants(answer))
-            if (score >= 0.78) used += index
+            if (score >= MatchResult.ACCEPT_THRESHOLD) used += index
         }
     }
 
@@ -213,7 +253,7 @@ object AnswerMatcher {
         val unique = mutableListOf<String>()
         for (answer in matched) {
             val already = unique.any { existing ->
-                similarity(normalize(existing), normalize(answer), expandVariants(answer)) >= 0.78
+                similarity(normalize(existing), normalize(answer), expandVariants(answer)) >= MatchResult.ACCEPT_THRESHOLD
             }
             if (!already) unique += answer
         }
@@ -289,11 +329,36 @@ object AnswerMatcher {
         aliases.forEach { (from, to) ->
             text = text.replace(from, to)
         }
-        text = text.replace(Regex("""\bd c\b"""), "dc")
-        text = text.replace(Regex("""\bjuly 4(?!\s*1776)\b"""), "independence day")
         text = text.replace(Regex("[^a-z0-9\\s]"), " ")
         text = text.replace(Regex("\\s+"), " ").trim()
+        text = text.replace(Regex("""\bd c\b"""), "dc")
+        text = reorderDates(text)
+        // Runs after punctuation is stripped so the 1776 guard sees "july 4 1776", not "july 4, 1776".
+        text = text.replace(Regex("""\bjuly 4(?!\s+1776)\b"""), "independence day")
+        text = expandAbbreviations(text)
         return collapseNumberWords(text)
+    }
+
+    /** Rewrites "4 july 1776" to "july 4 1776" so day-first input matches the official month-first wording. */
+    private fun reorderDates(text: String): String {
+        val monthNames = months.drop(1).joinToString("|")
+        return text.replace(Regex("""\b(\d{1,2})\s+($monthNames)\b(\s+\d{4})?""")) { match ->
+            val day = match.groupValues[1]
+            val month = match.groupValues[2]
+            val year = match.groupValues[3]
+            "$month $day$year"
+        }
+    }
+
+    /**
+     * Expands the whole input when it is nothing but a state code or initialism. Codes that are also
+     * ordinary English words are skipped, since "in" or "me" is far more likely to be the word.
+     */
+    private fun expandAbbreviations(text: String): String {
+        initialisms[text]?.let { return it }
+        if (text in ambiguousStateCodes) return text
+        stateAbbreviations[text]?.let { return it }
+        return text
     }
 
     private fun collapseNumberWords(text: String): String {
@@ -341,8 +406,28 @@ object AnswerMatcher {
 
     private fun expandVariants(answer: String): List<String> {
         val withoutParens = answer.replace(Regex("""\([^)]*\)"""), " ")
-        val onlyParens = Regex("""\(([^)]*)\)""").findAll(answer).map { it.groupValues[1] }.toList()
-        return (listOf(answer, withoutParens) + onlyParens).map { normalize(it) }.filter { it.isNotBlank() }.distinct()
+        val parenGroups = Regex("""\(([^)]*)\)""").findAll(answer).map { it.groupValues[1] }.toList()
+        // "Automobile (cars, internal combustion engine)" lists alternatives, so each is its own answer.
+        val parenParts = parenGroups.flatMap { it.split(",") }
+        val surnames = surnameVariants(withoutParens)
+        return (listOf(answer, withoutParens) + parenGroups + parenParts + surnames)
+            .map { normalize(it) }
+            .filter { it.isNotBlank() }
+            .distinct()
+    }
+
+    /**
+     * A personal name also answers to its surname alone ("Mott" for "Lucretia Mott"). Only applies to
+     * capitalized multi-word phrases with no common noun, so "New Year's Day" is not read as a name.
+     */
+    private fun surnameVariants(answer: String): List<String> {
+        val words = answer.trim().split(Regex("\\s+")).filter { it.isNotBlank() }
+        if (words.size < 2 || words.size > 4) return emptyList()
+        if (!words.all { it.first().isUpperCase() || it.endsWith(".") }) return emptyList()
+        if (words.any { it.trimEnd('.', ',').lowercase() in nonNameWords }) return emptyList()
+        val skip = setOf("jr", "jr.", "junior", "sr", "sr.", "senior", "ii", "iii", "iv")
+        val last = words.last { it.lowercase() !in skip }.trimEnd('.', ',')
+        return if (last.length >= 3) listOf(last) else emptyList()
     }
 
     internal fun similarity(user: String, official: String, variants: List<String>): Double {

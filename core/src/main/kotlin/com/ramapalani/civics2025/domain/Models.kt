@@ -70,11 +70,39 @@ enum class SessionMode { LEARN, TEST, DAILY }
 
 enum class AnswerPath { TYPED, MCQ }
 
+/**
+ * How close an answer came, independent of whether it passed. [EXACT] and [STRONG] are correct;
+ * [CLOSE] is a near miss worth showing the official wording for; [WEAK] and [NONE] are wrong.
+ */
+enum class AnswerConfidence { EXACT, STRONG, CLOSE, WEAK, NONE }
+
 data class MatchResult(
     val correct: Boolean,
     val matchedAnswers: List<String>,
     val similarity: Double,
-)
+    /** For ALL_N, how many distinct answers were required. 1 for ANY_ONE. */
+    val required: Int = 1,
+) {
+    /** Distinct accepted answers the input covered. */
+    val matchedCount: Int get() = matchedAnswers.size
+
+    val confidence: AnswerConfidence
+        get() = when {
+            similarity >= 0.99 -> AnswerConfidence.EXACT
+            similarity >= ACCEPT_THRESHOLD -> AnswerConfidence.STRONG
+            similarity >= 0.60 -> AnswerConfidence.CLOSE
+            similarity > 0.0 -> AnswerConfidence.WEAK
+            else -> AnswerConfidence.NONE
+        }
+
+    /** True when the answer missed but came close enough to be worth a nudge rather than a flat no. */
+    val nearMiss: Boolean get() = !correct && confidence == AnswerConfidence.CLOSE
+
+    companion object {
+        /** Score at or above which an answer counts as correct. */
+        const val ACCEPT_THRESHOLD = 0.78
+    }
+}
 
 data class GradedAnswer(
     val questionId: Int,
@@ -83,7 +111,17 @@ data class GradedAnswer(
     val correct: Boolean,
     val practicePoints: Double,
     val matchedAnswers: List<String>,
+    val similarity: Double = 0.0,
+    val confidence: AnswerConfidence = AnswerConfidence.NONE,
+    /** For ALL_N, how many distinct answers were required. 1 for ANY_ONE. */
+    val required: Int = 1,
 ) {
+    /** True when the answer missed but came close enough to be worth a nudge rather than a flat no. */
+    val nearMiss: Boolean get() = !correct && confidence == AnswerConfidence.CLOSE
+
+    /** Confidence as a whole percent, for display. */
+    val confidencePercent: Int get() = (similarity * 100).toInt().coerceIn(0, 100)
+
     companion object {
         const val TYPED_POINTS = 1.0
         const val MCQ_POINTS = 0.6

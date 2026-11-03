@@ -62,6 +62,65 @@ class AnswerMatcherTest {
     }
 
     @Test
+    fun derivesVariantsFromOfficialWording() {
+        fun ask(id: Int, official: List<String>, user: String): Boolean {
+            val question = CivicsQuestion(
+                id = id,
+                section = "test",
+                topic = "test",
+                question = "test",
+                acceptedAnswers = official,
+                extraInfo = "test",
+            )
+            return AnswerMatcher.match(question, user).correct
+        }
+
+        // State codes expand to the full state name.
+        assertTrue(ask(81, listOf("New Hampshire"), "NH"))
+        assertTrue(ask(81, listOf("Rhode Island"), "RI"))
+        // Presidential initialisms.
+        assertTrue(ask(105, listOf("(Franklin) Roosevelt"), "FDR"))
+        // Surname alone answers for a personal name.
+        assertTrue(ask(99, listOf("Lucretia Mott"), "Mott"))
+        assertTrue(ask(99, listOf("Susan B. Anthony"), "Anthony"))
+        // Each alternative inside parentheses stands on its own.
+        assertTrue(ask(118, listOf("Automobile (cars, internal combustion engine)"), "Cars"))
+        assertTrue(ask(118, listOf("Integrated circuit (IC)"), "IC"))
+        // Hyphenation is not significant.
+        assertTrue(ask(123, listOf("The Star-Spangled Banner"), "Star Spangled Banner"))
+        // Day-first dates and ordinals reach the official month-first wording.
+        assertTrue(ask(79, listOf("July 4, 1776"), "July 4 1776"))
+        assertTrue(ask(79, listOf("July 4, 1776"), "4 July 1776"))
+        assertTrue(ask(79, listOf("July 4, 1776"), "July 4th 1776"))
+        assertTrue(ask(79, listOf("July 4, 1776"), "7/4/1776"))
+    }
+
+    @Test
+    fun abbreviationExpansionStaysNarrow() {
+        fun ask(official: List<String>, user: String): Boolean {
+            val question = CivicsQuestion(
+                id = 1,
+                section = "test",
+                topic = "test",
+                question = "test",
+                acceptedAnswers = official,
+                extraInfo = "test",
+            )
+            return AnswerMatcher.match(question, user).correct
+        }
+
+        // A state code only expands standing alone, so these common words are untouched.
+        assertFalse(ask(listOf("Indiana"), "in"))
+        assertFalse(ask(listOf("Oregon"), "or"))
+        assertFalse(ask(listOf("Maine"), "me"))
+        // A holiday is not a personal name, so "Day" never becomes a surname variant.
+        assertFalse(ask(listOf("New Year's Day"), "day"))
+        assertFalse(ask(listOf("Memorial Day"), "day"))
+        // Independence Day keeps its alias when no year follows.
+        assertTrue(ask(listOf("Independence Day"), "July 4"))
+    }
+
+    @Test
     fun rejectsUnrelatedAnswer() {
         assertFalse(AnswerMatcher.match(constitution, "Declaration of Independence").correct)
         assertFalse(AnswerMatcher.match(president, "Joe Biden").correct)

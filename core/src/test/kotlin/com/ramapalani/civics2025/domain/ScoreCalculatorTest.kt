@@ -50,6 +50,49 @@ class ScoreCalculatorTest {
     }
 
     @Test
+    fun gradeCarriesConfidence() {
+        val question = CivicsQuestion(
+            id = 2,
+            section = "S",
+            topic = "T",
+            question = "Q",
+            acceptedAnswers = listOf("The Constitution"),
+            extraInfo = "",
+        )
+        val exact = ScoreCalculator.grade(question, AnswerPath.TYPED, "the constitution", LocalOfficials())
+        assertEquals(AnswerConfidence.EXACT, exact.confidence)
+        assertEquals(100, exact.confidencePercent)
+
+        val wrong = ScoreCalculator.grade(question, AnswerPath.TYPED, "bananas", LocalOfficials())
+        assertFalse(wrong.correct)
+        assertTrue(wrong.confidencePercent < 60, "got ${wrong.confidencePercent}")
+    }
+
+    @Test
+    fun multiAnswerReportsPartialCoverage() {
+        val question = CivicsQuestion(
+            id = 10,
+            section = "S",
+            topic = "T",
+            question = "Name two",
+            acceptedAnswers = listOf("Equality", "Liberty", "Natural rights"),
+            extraInfo = "",
+            answerKind = "all_n",
+            minRequired = 2,
+        )
+        // One of two required: wrong, but the score reflects half the work rather than zero.
+        val partial = ScoreCalculator.grade(question, AnswerPath.TYPED, "liberty", LocalOfficials())
+        assertFalse(partial.correct)
+        assertEquals(1, partial.matchedAnswers.size)
+        assertEquals(2, partial.required)
+        assertEquals(50, partial.confidencePercent)
+
+        val full = ScoreCalculator.grade(question, AnswerPath.TYPED, "liberty and equality", LocalOfficials())
+        assertTrue(full.correct)
+        assertEquals(100, full.confidencePercent)
+    }
+
+    @Test
     fun failAtNineWrong() {
         assertTrue(ScoreCalculator.shouldStopInterview(correct = 3, wrong = 9, starred6520 = false))
         assertFalse(ScoreCalculator.shouldStopInterview(correct = 3, wrong = 8, starred6520 = false))
