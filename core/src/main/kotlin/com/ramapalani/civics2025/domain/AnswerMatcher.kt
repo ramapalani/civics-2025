@@ -82,6 +82,13 @@ object AnswerMatcher {
         "labor", "christmas", "thanksgiving", "veterans",
     )
 
+    /** Guards on the stem fallback, kept strict so only inflections of one word match. */
+    private const val STEM_MIN_LENGTH = 6
+    private const val STEM_MIN_PREFIX = 5
+    private const val STEM_MIN_PREFIX_RATIO = 0.85
+    private const val STEM_MIN_DICE = 0.60
+    private const val STEM_MATCH_SCORE = 0.85
+
     private val genericTokens = setOf("day", "birthday", "jr", "junior", "sr", "senior")
 
     private val weakAlone = setOf(
@@ -497,10 +504,56 @@ object AnswerMatcher {
         if (maxLen == 0) return 1.0
         val dist = levenshtein(a, b)
         val allowed = if (maxLen <= 4) 1 else 2
-        if (dist > allowed) return 0.0
         val prefix = a.take(2) == b.take(2) || a.first() == b.first()
-        if (!prefix && dist > 1) return 0.0
-        return 1.0 - (dist.toDouble() / maxLen)
+        if (dist <= allowed && (prefix || dist <= 1)) {
+            return 1.0 - (dist.toDouble() / maxLen)
+        }
+        return stemPairScore(a, b)
+    }
+
+    /**
+     * Rescues inflections of the same word, which edit distance misses because the endings differ by
+     * several characters ("naturalize" and "naturalization" are four edits apart). Both words must be
+     * long, share a long common prefix, and differ only past that prefix, so unrelated words that
+     * merely start alike ("constitution" and "constitutional" yes, "president" and "presidency" yes,
+     * but "senate" and "senator" only because they genuinely share a stem) are the intended hits.
+     */
+    private fun stemPairScore(a: String, b: String): Double {
+        if (a.length < STEM_MIN_LENGTH || b.length < STEM_MIN_LENGTH) return 0.0
+        val shared = a.commonPrefixWith(b).length
+        if (shared < STEM_MIN_PREFIX) return 0.0
+        // The stem must be nearly all of the shorter word. This is what separates a true inflection
+        // ("govern" in "government", ratio 1.0) from a coincidental prefix ("contin-ent" vs
+        // "contin-ue", ratio 0.75), which trigram overlap alone scores almost identically.
+        if (shared.toDouble() / minOf(a.length, b.length) < STEM_MIN_PREFIX_RATIO) return 0.0
+        if (trigramDice(a, b) < STEM_MIN_DICE) return 0.0
+        // A stem match is a deliberate near-equal, scored just above the coverage bar rather than
+        // by raw overlap, which for these pairs sits below it.
+        return STEM_MATCH_SCORE
+    }
+
+    /** Dice coefficient over character trigrams: 2*shared / total, robust to differing suffixes. */
+    private fun trigramDice(a: String, b: String): Double {
+        val left = trigrams(a)
+        val right = trigrams(b)
+        if (left.isEmpty() || right.isEmpty()) return 0.0
+        val counts = HashMap<String, Int>()
+        left.forEach { counts[it] = (counts[it] ?: 0) + 1 }
+        var shared = 0
+        right.forEach { gram ->
+            val remaining = counts[gram] ?: 0
+            if (remaining > 0) {
+                counts[gram] = remaining - 1
+                shared += 1
+            }
+        }
+        return (2.0 * shared) / (left.size + right.size)
+    }
+
+    private fun trigrams(text: String): List<String> {
+        val padded = "  $text "
+        if (padded.length < 3) return emptyList()
+        return (0..padded.length - 3).map { padded.substring(it, it + 3) }
     }
 
     internal fun levenshtein(a: String, b: String): Int {

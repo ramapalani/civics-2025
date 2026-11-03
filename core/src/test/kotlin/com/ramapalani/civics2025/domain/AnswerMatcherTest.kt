@@ -121,6 +121,33 @@ class AnswerMatcherTest {
     }
 
     @Test
+    fun acceptsInflectionsOfTheSameWord() {
+        fun ask(official: String, user: String): Boolean {
+            val question = CivicsQuestion(
+                id = 1,
+                section = "test",
+                topic = "test",
+                question = "test",
+                acceptedAnswers = listOf(official),
+                extraInfo = "test",
+            )
+            return AnswerMatcher.match(question, user).correct
+        }
+
+        // Endings differ by more than edit distance tolerates, but the stem is the same word.
+        assertTrue(ask("Naturalize", "naturalization"))
+        assertTrue(ask("Constitution", "constitutional"))
+        assertTrue(ask("Declaration of Independence", "declaration of independance"))
+
+        // Words that merely start alike are still rejected.
+        assertFalse(ask("Continent", "continue"))
+        assertFalse(ask("President", "precedent"))
+        assertFalse(ask("Constitution", "constable"))
+        // Senate and senator name different things, so sharing a stem is not enough.
+        assertFalse(ask("Senate", "senator"))
+    }
+
+    @Test
     fun rejectsUnrelatedAnswer() {
         assertFalse(AnswerMatcher.match(constitution, "Declaration of Independence").correct)
         assertFalse(AnswerMatcher.match(president, "Joe Biden").correct)
