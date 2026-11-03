@@ -209,9 +209,22 @@ class QuizViewModel(
         _state.update { it.copy(finished = true, summary = summary) }
     }
 
-    fun acceptedAnswers(): List<String> {
-        val question = _state.value.current ?: return emptyList()
-        return AnswerMatcher.acceptedFor(question, _state.value.prefs.officials)
+    /**
+     * Splits the accepted answers into the USCIS-published ones and the extra spoken variants the
+     * matcher also accepts. Questions whose answer depends on who holds office or where the user
+     * lives have no fixed official list, so everything goes in [AnswerSections.accepted].
+     */
+    fun answerSections(): AnswerSections {
+        val question = _state.value.current ?: return AnswerSections()
+        val accepted = AnswerMatcher.acceptedFor(question, _state.value.prefs.officials)
+        if (question.currentOfficial || question.stateSpecific || question.officialAnswers.isEmpty()) {
+            return AnswerSections(accepted = accepted)
+        }
+        val official = question.officialAnswers.map { it.trim().lowercase() }.toSet()
+        return AnswerSections(
+            official = question.officialAnswers,
+            other = accepted.filter { it.trim().lowercase() !in official },
+        )
     }
 
     companion object {
@@ -237,3 +250,9 @@ class QuizViewModel(
         }
     }
 }
+
+data class AnswerSections(
+    val official: List<String> = emptyList(),
+    val other: List<String> = emptyList(),
+    val accepted: List<String> = emptyList(),
+)
