@@ -55,6 +55,45 @@ class BankVerificationTest {
     }
 
     @Test
+    fun confidenceAgreesWithTheVerdictAcrossTheBank() {
+        val failures = mutableListOf<String>()
+        bank.forEach { question ->
+            AnswerMatcher.acceptedFor(question, officials)
+                .filter { !it.startsWith("Answers will vary", ignoreCase = true) }
+                .forEach { answer ->
+                    val match = AnswerMatcher.match(question, answer, officials)
+                    if (match.correct && match.similarity < MatchResult.ACCEPT_THRESHOLD) {
+                        failures += "Q${question.id} \"$answer\" passed on similarity ${match.similarity}"
+                    }
+                    if (match.correct && match.nearMiss) {
+                        failures += "Q${question.id} \"$answer\" is both correct and a near miss"
+                    }
+                    if (match.correct && match.matchedAnswers.isEmpty()) {
+                        failures += "Q${question.id} \"$answer\" passed with nothing matched"
+                    }
+                }
+        }
+        assertTrue(failures.isEmpty(), "${failures.size} gaps:\n${failures.joinToString("\n")}")
+    }
+
+    @Test
+    fun decoysScoreBelowTheNearMissBand() {
+        // A wrong answer should not be dressed up as nearly right on the result card.
+        val decoys = listOf("pizza", "Canada", "King Henry VIII")
+        val failures = mutableListOf<String>()
+        bank.forEach { question ->
+            if (question.stateSpecific) return@forEach
+            decoys.forEach { decoy ->
+                val match = AnswerMatcher.match(question, decoy, officials)
+                if (match.nearMiss) {
+                    failures += "Q${question.id} called \"$decoy\" a near miss (${match.similarity})"
+                }
+            }
+        }
+        assertTrue(failures.isEmpty(), failures.joinToString("\n"))
+    }
+
+    @Test
     fun rejectsUnrelatedAnswers() {
         val decoys = listOf(
             "pizza",

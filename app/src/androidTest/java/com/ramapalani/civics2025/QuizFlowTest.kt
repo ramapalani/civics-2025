@@ -36,6 +36,8 @@ class QuizFlowTest {
 
         // Submitting must produce a graded result: either "Correct!" or "Not quite."
         composeRule.onNodeWithTag("gradeResult").assertIsDisplayed()
+        // A typed answer also reports how closely it matched, so the verdict carries a percentage.
+        composeRule.onNodeWithTag("gradeResult").assertTextContains("% match", substring = true)
 
         // The Next button is labelled "Next" (not "Finish") because we're not on the
         // last question — clicking it advances to question 2.
@@ -47,6 +49,33 @@ class QuizFlowTest {
         composeRule.onNodeWithTag("progressLabel").assertTextContains("2 /", substring = true)
         composeRule.onNodeWithTag("questionText").assertIsDisplayed()
         composeRule.onNodeWithTag("gradeResult").assertDoesNotExist()
+    }
+
+    /**
+     * The first Learn question is "What is the form of government of the United States?", whose
+     * accepted answers include "Republic". Typing it with a typo must still grade as correct, and
+     * the card must report full confidence — the matcher normalizes before scoring, so a one-letter
+     * slip is not a partial match.
+     */
+    @Test
+    fun learnMode_typedAnswer_showsConfidenceForRightAndWrongAnswers() {
+        composeRule.onNodeWithTag("learnModeButton").performClick()
+        composeRule.onNodeWithTag("questionText").assertTextContains("form of government", substring = true)
+
+        composeRule.onNodeWithTag("answerInput").performTextInput("republik")
+        composeRule.onNodeWithTag("checkButton").performClick()
+        composeRule.onNodeWithTag("gradeResult").assertTextContains("Correct!", substring = true)
+        composeRule.onNodeWithTag("gradeResult").assertTextContains("100% match", substring = true)
+
+        // Question 2 is "What is the supreme law of the land?". An unrelated answer scores zero
+        // rather than landing in a middle band that would read as nearly right.
+        composeRule.onNodeWithTag("nextButton").performClick()
+        composeRule.onNodeWithTag("answerInput").performTextInput("pizza")
+        composeRule.onNodeWithTag("checkButton").performClick()
+        composeRule.onNodeWithTag("gradeResult").assertTextContains("Not quite.", substring = true)
+        composeRule.onNodeWithTag("gradeResult").assertTextContains("0% match", substring = true)
+        // Nothing about "pizza" is close, so the card must not soften the verdict with a nudge.
+        composeRule.onNodeWithTag("nearMissHint").assertDoesNotExist()
     }
 
     /**

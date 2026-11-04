@@ -31,7 +31,6 @@ object AnswerMatcher {
         "donald john trump" to "donald trump",
         "john g roberts jr" to "john roberts",
         "john roberts junior" to "john roberts",
-        "star spangled banner" to "starspangled banner",
         "washington dc" to "washington dc",
         "washington d c" to "washington dc",
         "fourth of july" to "independence day",
@@ -46,6 +45,49 @@ object AnswerMatcher {
         "sept 11 2001" to "september 11 2001",
         "nine eleven" to "september 11 2001",
     )
+
+    private val stateAbbreviations = mapOf(
+        "al" to "alabama", "ak" to "alaska", "az" to "arizona", "ar" to "arkansas",
+        "ca" to "california", "co" to "colorado", "ct" to "connecticut", "de" to "delaware",
+        "fl" to "florida", "ga" to "georgia", "hi" to "hawaii", "id" to "idaho",
+        "il" to "illinois", "in" to "indiana", "ia" to "iowa", "ks" to "kansas",
+        "ky" to "kentucky", "la" to "louisiana", "me" to "maine", "md" to "maryland",
+        "ma" to "massachusetts", "mi" to "michigan", "mn" to "minnesota", "ms" to "mississippi",
+        "mo" to "missouri", "mt" to "montana", "ne" to "nebraska", "nv" to "nevada",
+        "nh" to "new hampshire", "nj" to "new jersey", "nm" to "new mexico", "ny" to "new york",
+        "nc" to "north carolina", "nd" to "north dakota", "oh" to "ohio", "ok" to "oklahoma",
+        "or" to "oregon", "pa" to "pennsylvania", "ri" to "rhode island", "sc" to "south carolina",
+        "sd" to "south dakota", "tn" to "tennessee", "tx" to "texas", "ut" to "utah",
+        "vt" to "vermont", "va" to "virginia", "wa" to "washington", "wv" to "west virginia",
+        "wi" to "wisconsin", "wy" to "wyoming",
+    )
+
+    /** State codes that are also ordinary words; the word reading wins. */
+    private val ambiguousStateCodes = setOf("in", "or", "me", "la", "oh", "hi", "ok", "id")
+
+    private val initialisms = mapOf(
+        "fdr" to "franklin roosevelt",
+        "jfk" to "john f kennedy",
+        "lbj" to "lyndon b johnson",
+        "teddy roosevelt" to "theodore roosevelt",
+        "ike" to "dwight d eisenhower",
+    )
+
+    /** Words that rule a capitalized phrase out of being a personal name. */
+    private val nonNameWords = setOf(
+        "day", "birthday", "year", "years", "eve", "war", "court", "house", "senate",
+        "state", "states", "united", "america", "american", "constitution", "congress",
+        "president", "party", "city", "island", "north", "south", "east", "west", "new",
+        "bill", "rights", "act", "amendment", "flag", "banner", "independence", "memorial",
+        "labor", "christmas", "thanksgiving", "veterans",
+    )
+
+    /** Guards on the stem fallback, kept strict so only inflections of one word match. */
+    private const val STEM_MIN_LENGTH = 6
+    private const val STEM_MIN_PREFIX = 5
+    private const val STEM_MIN_PREFIX_RATIO = 0.85
+    private const val STEM_MIN_DICE = 0.60
+    private const val STEM_MATCH_SCORE = 0.85
 
     private val genericTokens = setOf("day", "birthday", "jr", "junior", "sr", "senior")
 
@@ -86,7 +128,12 @@ object AnswerMatcher {
     ): MatchResult {
         val accepted = acceptedFor(question, officials)
         if (userInput.isBlank()) {
-            return MatchResult(false, emptyList(), 0.0)
+            // Keep the score's meaning tied to the question, not to how the answer failed.
+            return when (question.kind) {
+                AnswerKind.ANY_ONE -> MatchResult(false, emptyList(), 0.0)
+                AnswerKind.ALL_N ->
+                    MatchResult(false, emptyList(), 0.0, question.minRequired, ScoreKind.COVERAGE)
+            }
         }
 
         return when (question.kind) {
@@ -137,7 +184,8 @@ object AnswerMatcher {
             for (answer in accepted) {
                 val score = similarity(userNorm, normalize(answer), expandVariants(answer))
                 if (score > best.similarity) {
-                    best = MatchResult(score >= 0.78, if (score >= 0.78) listOf(answer) else emptyList(), score)
+                    val hit = score >= MatchResult.ACCEPT_THRESHOLD
+                    best = MatchResult(hit, if (hit) listOf(answer) else emptyList(), score)
                 }
             }
         }
@@ -149,7 +197,11 @@ object AnswerMatcher {
         val fromBag = collectMatchesFromBag(accepted, userInput)
         val matched = uniqueFamilies(fromParts + fromBag)
         val correct = matched.size >= minRequired
-        return MatchResult(correct, matched, if (matched.isEmpty()) 0.0 else 1.0)
+        // Report real coverage ("2 of 3") rather than a flat pass/fail, so a partial answer is visible.
+        val coverage = if (minRequired <= 0) 0.0 else {
+            (matched.size.toDouble() / minRequired).coerceAtMost(1.0)
+        }
+        return MatchResult(correct, matched, coverage, minRequired, ScoreKind.COVERAGE)
     }
 
     private fun collectMatches(accepted: List<String>, parts: List<String>): List<String> {
@@ -198,14 +250,14 @@ object AnswerMatcher {
                 bestIdx = index
             }
         }
-        return if (bestIdx >= 0 && bestScore >= 0.78) bestIdx to accepted[bestIdx] else null
+        return if (bestIdx >= 0 && bestScore >= MatchResult.ACCEPT_THRESHOLD) bestIdx to accepted[bestIdx] else null
     }
 
     private fun markFamily(accepted: List<String>, chosen: String, used: MutableSet<Int>) {
         accepted.forEachIndexed { index, answer ->
             if (index in used) return@forEachIndexed
             val score = similarity(normalize(chosen), normalize(answer), expandVariants(answer))
-            if (score >= 0.78) used += index
+            if (score >= MatchResult.ACCEPT_THRESHOLD) used += index
         }
     }
 
@@ -213,7 +265,7 @@ object AnswerMatcher {
         val unique = mutableListOf<String>()
         for (answer in matched) {
             val already = unique.any { existing ->
-                similarity(normalize(existing), normalize(answer), expandVariants(answer)) >= 0.78
+                similarity(normalize(existing), normalize(answer), expandVariants(answer)) >= MatchResult.ACCEPT_THRESHOLD
             }
             if (!already) unique += answer
         }
@@ -289,11 +341,36 @@ object AnswerMatcher {
         aliases.forEach { (from, to) ->
             text = text.replace(from, to)
         }
-        text = text.replace(Regex("""\bd c\b"""), "dc")
-        text = text.replace(Regex("""\bjuly 4(?!\s*1776)\b"""), "independence day")
         text = text.replace(Regex("[^a-z0-9\\s]"), " ")
         text = text.replace(Regex("\\s+"), " ").trim()
+        text = text.replace(Regex("""\bd c\b"""), "dc")
+        text = reorderDates(text)
+        // Runs after punctuation is stripped so the 1776 guard sees "july 4 1776", not "july 4, 1776".
+        text = text.replace(Regex("""\bjuly 4(?!\s+1776)\b"""), "independence day")
+        text = expandAbbreviations(text)
         return collapseNumberWords(text)
+    }
+
+    /** Rewrites "4 july 1776" to "july 4 1776" so day-first input matches the official month-first wording. */
+    private fun reorderDates(text: String): String {
+        val monthNames = months.drop(1).joinToString("|")
+        return text.replace(Regex("""\b(\d{1,2})\s+($monthNames)\b(\s+\d{4})?""")) { match ->
+            val day = match.groupValues[1]
+            val month = match.groupValues[2]
+            val year = match.groupValues[3]
+            "$month $day$year"
+        }
+    }
+
+    /**
+     * Expands the whole input when it is nothing but a state code or initialism. Codes that are also
+     * ordinary English words are skipped, since "in" or "me" is far more likely to be the word.
+     */
+    private fun expandAbbreviations(text: String): String {
+        initialisms[text]?.let { return it }
+        if (text in ambiguousStateCodes) return text
+        stateAbbreviations[text]?.let { return it }
+        return text
     }
 
     private fun collapseNumberWords(text: String): String {
@@ -341,8 +418,28 @@ object AnswerMatcher {
 
     private fun expandVariants(answer: String): List<String> {
         val withoutParens = answer.replace(Regex("""\([^)]*\)"""), " ")
-        val onlyParens = Regex("""\(([^)]*)\)""").findAll(answer).map { it.groupValues[1] }.toList()
-        return (listOf(answer, withoutParens) + onlyParens).map { normalize(it) }.filter { it.isNotBlank() }.distinct()
+        val parenGroups = Regex("""\(([^)]*)\)""").findAll(answer).map { it.groupValues[1] }.toList()
+        // "Automobile (cars, internal combustion engine)" lists alternatives, so each is its own answer.
+        val parenParts = parenGroups.flatMap { it.split(",") }
+        val surnames = surnameVariants(withoutParens)
+        return (listOf(answer, withoutParens) + parenGroups + parenParts + surnames)
+            .map { normalize(it) }
+            .filter { it.isNotBlank() }
+            .distinct()
+    }
+
+    /**
+     * A personal name also answers to its surname alone ("Mott" for "Lucretia Mott"). Only applies to
+     * capitalized multi-word phrases with no common noun, so "New Year's Day" is not read as a name.
+     */
+    private fun surnameVariants(answer: String): List<String> {
+        val words = answer.trim().split(Regex("\\s+")).filter { it.isNotBlank() }
+        if (words.size < 2 || words.size > 4) return emptyList()
+        if (!words.all { it.first().isUpperCase() || it.endsWith(".") }) return emptyList()
+        if (words.any { it.trimEnd('.', ',').lowercase() in nonNameWords }) return emptyList()
+        val skip = setOf("jr", "jr.", "junior", "sr", "sr.", "senior", "ii", "iii", "iv")
+        val last = words.last { it.lowercase() !in skip }.trimEnd('.', ',')
+        return if (last.length >= 3) listOf(last) else emptyList()
     }
 
     internal fun similarity(user: String, official: String, variants: List<String>): Double {
@@ -412,10 +509,56 @@ object AnswerMatcher {
         if (maxLen == 0) return 1.0
         val dist = levenshtein(a, b)
         val allowed = if (maxLen <= 4) 1 else 2
-        if (dist > allowed) return 0.0
         val prefix = a.take(2) == b.take(2) || a.first() == b.first()
-        if (!prefix && dist > 1) return 0.0
-        return 1.0 - (dist.toDouble() / maxLen)
+        if (dist <= allowed && (prefix || dist <= 1)) {
+            return 1.0 - (dist.toDouble() / maxLen)
+        }
+        return stemPairScore(a, b)
+    }
+
+    /**
+     * Rescues inflections of the same word, which edit distance misses because the endings differ by
+     * several characters ("naturalize" and "naturalization" are four edits apart). Both words must be
+     * long, share a long common prefix, and differ only past that prefix, so unrelated words that
+     * merely start alike ("constitution" and "constitutional" yes, "president" and "presidency" yes,
+     * but "senate" and "senator" only because they genuinely share a stem) are the intended hits.
+     */
+    private fun stemPairScore(a: String, b: String): Double {
+        if (a.length < STEM_MIN_LENGTH || b.length < STEM_MIN_LENGTH) return 0.0
+        val shared = a.commonPrefixWith(b).length
+        if (shared < STEM_MIN_PREFIX) return 0.0
+        // The stem must be nearly all of the shorter word. This is what separates a true inflection
+        // ("govern" in "government", ratio 1.0) from a coincidental prefix ("contin-ent" vs
+        // "contin-ue", ratio 0.75), which trigram overlap alone scores almost identically.
+        if (shared.toDouble() / minOf(a.length, b.length) < STEM_MIN_PREFIX_RATIO) return 0.0
+        if (trigramDice(a, b) < STEM_MIN_DICE) return 0.0
+        // A stem match is a deliberate near-equal, scored just above the coverage bar rather than
+        // by raw overlap, which for these pairs sits below it.
+        return STEM_MATCH_SCORE
+    }
+
+    /** Dice coefficient over character trigrams: 2*shared / total, robust to differing suffixes. */
+    private fun trigramDice(a: String, b: String): Double {
+        val left = trigrams(a)
+        val right = trigrams(b)
+        if (left.isEmpty() || right.isEmpty()) return 0.0
+        val counts = HashMap<String, Int>()
+        left.forEach { counts[it] = (counts[it] ?: 0) + 1 }
+        var shared = 0
+        right.forEach { gram ->
+            val remaining = counts[gram] ?: 0
+            if (remaining > 0) {
+                counts[gram] = remaining - 1
+                shared += 1
+            }
+        }
+        return (2.0 * shared) / (left.size + right.size)
+    }
+
+    private fun trigrams(text: String): List<String> {
+        val padded = "  $text "
+        if (padded.length < 3) return emptyList()
+        return (0..padded.length - 3).map { padded.substring(it, it + 3) }
     }
 
     internal fun levenshtein(a: String, b: String): Int {

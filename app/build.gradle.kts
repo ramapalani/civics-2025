@@ -90,8 +90,10 @@ dependencies {
 
     debugImplementation("androidx.compose.ui:ui-tooling")
 
-    androidTestImplementation("androidx.test.ext:junit:1.2.1")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
+    // 1.3.0/3.7.0 or newer: earlier Espresso calls InputManager.getInstance(), which Android
+    // removed, so every instrumentation test errors out on an API 36+ device.
+    androidTestImplementation("androidx.test.ext:junit:1.3.0")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.7.0")
     androidTestImplementation(platform("androidx.compose:compose-bom:2024.12.01"))
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-test-manifest")

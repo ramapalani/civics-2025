@@ -26,6 +26,9 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.ramapalani.civics2025.domain.AnswerKind
+import com.ramapalani.civics2025.domain.AnswerPath
+import com.ramapalani.civics2025.domain.GradedAnswer
+import com.ramapalani.civics2025.domain.ScoreKind
 import com.ramapalani.civics2025.domain.SessionMode
 import com.ramapalani.civics2025.ui.theme.DeepGreen
 import com.ramapalani.civics2025.ui.theme.FlagRed
@@ -125,11 +128,21 @@ fun QuestionScreen(
                 Card(Modifier.fillMaxWidth()) {
                     Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                         Text(
-                            if (grade.correct) "Correct! +${grade.practicePoints}" else "Not quite.",
+                            buildString {
+                                append(if (grade.correct) "Correct! +${grade.practicePoints}" else "Not quite.")
+                                confidenceLabel(grade)?.let { append("  ·  $it") }
+                            },
                             color = if (grade.correct) DeepGreen else FlagRed,
                             style = MaterialTheme.typography.titleLarge,
                             modifier = Modifier.testTag("gradeResult"),
                         )
+                        if (grade.nearMiss) {
+                            Text(
+                                nearMissHint(grade),
+                                style = MaterialTheme.typography.bodyMedium,
+                                modifier = Modifier.testTag("nearMissHint"),
+                            )
+                        }
                         val sections = viewModel.answerSections()
                         if (sections.accepted.isNotEmpty()) {
                             Text("Accepted answers", fontWeight = FontWeight.SemiBold)
@@ -174,6 +187,25 @@ fun QuestionScreen(
 
         TextButton(onClick = onExit, modifier = Modifier.testTag("exitButton")) { Text("Exit") }
     }
+}
+
+/**
+ * How closely a typed answer matched, for the result card. A tapped multiple-choice answer is
+ * either right or wrong, so its score says nothing and is left off. Multi-answer questions report
+ * coverage ("2 of 3") instead of a percentage, which is what the user actually needs to fix.
+ */
+private fun confidenceLabel(grade: GradedAnswer): String? {
+    if (grade.path != AnswerPath.TYPED) return null
+    if (grade.scoreKind == ScoreKind.COVERAGE) {
+        return "matched ${grade.matchedAnswers.size} of ${grade.required}"
+    }
+    return "${grade.confidencePercent}% match"
+}
+
+/** Tells a near miss apart from a flat wrong answer, so the user knows to check the wording. */
+private fun nearMissHint(grade: GradedAnswer): String = when {
+    grade.scoreKind == ScoreKind.COVERAGE -> "So close — you needed just one more."
+    else -> "Very close. Check the wording below."
 }
 
 @Composable

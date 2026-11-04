@@ -15,6 +15,7 @@ object ScoreCalculator {
         officials: LocalOfficials,
     ): GradedAnswer {
         val match = if (path == AnswerPath.MCQ) {
+            // A tapped choice is either the right one or not, so confidence carries no information.
             val exact = question.acceptedAnswers.any { it.equals(rawInput.trim(), ignoreCase = true) } ||
                 AnswerMatcher.match(question, rawInput, officials).correct
             MatchResult(exact, if (exact) listOf(rawInput) else emptyList(), if (exact) 1.0 else 0.0)
@@ -33,6 +34,10 @@ object ScoreCalculator {
             correct = match.correct,
             practicePoints = points,
             matchedAnswers = match.matchedAnswers,
+            similarity = match.similarity,
+            confidence = match.confidence,
+            required = match.required,
+            scoreKind = match.scoreKind,
         )
     }
 
