@@ -1,6 +1,7 @@
 package com.ramapalani.civics2025.domain
 
 import kotlin.test.Test
+import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
@@ -118,6 +119,61 @@ class AnswerMatcherTest {
         assertFalse(ask(listOf("Memorial Day"), "day"))
         // Independence Day keeps its alias when no year follows.
         assertTrue(ask(listOf("Independence Day"), "July 4"))
+    }
+
+    @Test
+    fun normalizesBothSidesToTheSameForm() {
+        // A rewrite that fires on one side only makes a correct answer unmatchable, so the checks
+        // below compare the official wording against the way people write it.
+        fun same(a: String, b: String) = AnswerMatcher.normalize(a) == AnswerMatcher.normalize(b)
+
+        // The july 4 -> independence day rule must not fire on the Declaration's date. It used to
+        // run before punctuation was stripped, so its guard missed the comma and rewrote this.
+        assertTrue(same("July 4, 1776", "july 4 1776"), "got '${AnswerMatcher.normalize("July 4, 1776")}'")
+        assertTrue(AnswerMatcher.normalize("July 4, 1776").contains("july"))
+        // With no year it is still the holiday.
+        assertEquals(AnswerMatcher.normalize("Independence Day"), AnswerMatcher.normalize("July 4"))
+
+        // A hyphen is punctuation on both sides, not a word join on one of them. Articles survive
+        // normalization and are dropped later as stop words, so compare without the leading "the".
+        assertTrue(
+            same("Star-Spangled Banner", "Star Spangled Banner"),
+            "got '${AnswerMatcher.normalize("Star-Spangled Banner")}' vs " +
+                "'${AnswerMatcher.normalize("Star Spangled Banner")}'",
+        )
+
+        // Spelled-out numbers and digits collapse to one form.
+        assertTrue(same("one hundred", "100"))
+        assertTrue(same("twenty-seven", "27"))
+    }
+
+    @Test
+    fun gradesTheQuestionsThoseRewritesUsedToBreak() {
+        fun ask(official: String, user: String): Boolean {
+            val question = CivicsQuestion(
+                id = 1,
+                section = "test",
+                topic = "test",
+                question = "test",
+                acceptedAnswers = listOf(official),
+                extraInfo = "test",
+            )
+            return AnswerMatcher.match(question, user).correct
+        }
+
+        // Q79: the official date against how it is usually written.
+        assertTrue(ask("July 4, 1776", "July 4, 1776"))
+        assertTrue(ask("July 4, 1776", "july 4 1776"))
+        // The holiday is not the adoption date.
+        assertFalse(ask("July 4, 1776", "Independence Day"))
+
+        // Q123: the anthem with and without the hyphen.
+        assertTrue(ask("The Star-Spangled Banner", "The Star-Spangled Banner"))
+        assertTrue(ask("The Star-Spangled Banner", "star spangled banner"))
+
+        // Q21: the official wording carries both forms of the number.
+        assertTrue(ask("One hundred (100)", "100"))
+        assertTrue(ask("One hundred (100)", "one hundred"))
     }
 
     @Test

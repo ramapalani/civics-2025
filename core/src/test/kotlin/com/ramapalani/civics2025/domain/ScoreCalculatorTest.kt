@@ -93,6 +93,26 @@ class ScoreCalculatorTest {
     }
 
     @Test
+    fun mcqCarriesNoPartialCredit() {
+        val question = CivicsQuestion(
+            id = 1,
+            section = "S",
+            topic = "T",
+            question = "Q",
+            acceptedAnswers = listOf("Republic"),
+            extraInfo = "",
+        )
+        // A tapped choice is right or wrong, so its score must never land in a middle band.
+        val right = ScoreCalculator.grade(question, AnswerPath.MCQ, "Republic", LocalOfficials())
+        val wrong = ScoreCalculator.grade(question, AnswerPath.MCQ, "Monarchy", LocalOfficials())
+        assertEquals(AnswerConfidence.EXACT, right.confidence)
+        assertEquals(100, right.confidencePercent)
+        assertEquals(AnswerConfidence.NONE, wrong.confidence)
+        assertEquals(0, wrong.confidencePercent)
+        assertFalse(wrong.nearMiss)
+    }
+
+    @Test
     fun failAtNineWrong() {
         assertTrue(ScoreCalculator.shouldStopInterview(correct = 3, wrong = 9, starred6520 = false))
         assertFalse(ScoreCalculator.shouldStopInterview(correct = 3, wrong = 8, starred6520 = false))
