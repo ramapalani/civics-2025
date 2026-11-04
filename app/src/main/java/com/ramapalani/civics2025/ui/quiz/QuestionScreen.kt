@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.dp
 import com.ramapalani.civics2025.domain.AnswerKind
 import com.ramapalani.civics2025.domain.AnswerPath
 import com.ramapalani.civics2025.domain.GradedAnswer
+import com.ramapalani.civics2025.domain.ScoreKind
 import com.ramapalani.civics2025.domain.SessionMode
 import com.ramapalani.civics2025.ui.theme.DeepGreen
 import com.ramapalani.civics2025.ui.theme.FlagRed
@@ -135,6 +136,13 @@ fun QuestionScreen(
                             style = MaterialTheme.typography.titleLarge,
                             modifier = Modifier.testTag("gradeResult"),
                         )
+                        if (grade.nearMiss) {
+                            Text(
+                                nearMissHint(grade),
+                                style = MaterialTheme.typography.bodyMedium,
+                                modifier = Modifier.testTag("nearMissHint"),
+                            )
+                        }
                         Text("Accepted answers", fontWeight = FontWeight.SemiBold)
                         viewModel.acceptedAnswers().forEach { Text("• $it") }
                         Text("Why this matters", fontWeight = FontWeight.SemiBold)
@@ -175,8 +183,16 @@ fun QuestionScreen(
  */
 private fun confidenceLabel(grade: GradedAnswer): String? {
     if (grade.path != AnswerPath.TYPED) return null
-    if (grade.required > 1) return "matched ${grade.matchedAnswers.size} of ${grade.required}"
+    if (grade.scoreKind == ScoreKind.COVERAGE) {
+        return "matched ${grade.matchedAnswers.size} of ${grade.required}"
+    }
     return "${grade.confidencePercent}% match"
+}
+
+/** Tells a near miss apart from a flat wrong answer, so the user knows to check the wording. */
+private fun nearMissHint(grade: GradedAnswer): String = when {
+    grade.scoreKind == ScoreKind.COVERAGE -> "So close — you needed just one more."
+    else -> "Very close. Check the wording below."
 }
 
 @Composable

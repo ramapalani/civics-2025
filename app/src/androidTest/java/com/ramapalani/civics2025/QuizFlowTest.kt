@@ -73,6 +73,8 @@ class QuizFlowTest {
         composeRule.onNodeWithTag("checkButton").performClick()
         composeRule.onNodeWithTag("gradeResult").assertTextContains("Not quite.", substring = true)
         composeRule.onNodeWithTag("gradeResult").assertTextContains("0% match", substring = true)
+        // Nothing about "pizza" is close, so the card must not soften the verdict with a nudge.
+        composeRule.onNodeWithTag("nearMissHint").assertDoesNotExist()
     }
 
     /**

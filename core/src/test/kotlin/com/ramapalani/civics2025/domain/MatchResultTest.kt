@@ -3,6 +3,7 @@ package com.ramapalani.civics2025.domain
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
+import kotlin.test.assertNull
 import kotlin.test.assertTrue
 
 class MatchResultTest {
@@ -53,16 +54,38 @@ class MatchResultTest {
     }
 
     @Test
-    fun matchedCountTracksMatchedAnswers() {
-        val none = MatchResult(false, emptyList(), 0.0)
-        val two = MatchResult(true, listOf("Liberty", "Equality"), 1.0, required = 2)
-        assertEquals(0, none.matchedCount)
-        assertEquals(2, two.matchedCount)
-        assertEquals(2, two.required)
+    fun anyOneDefaultsToRequiringOne() {
+        val match = MatchResult(true, listOf("Republic"), 1.0)
+        assertEquals(1, match.required)
+        assertEquals(ScoreKind.SIMILARITY, match.scoreKind)
     }
 
     @Test
-    fun anyOneDefaultsToRequiringOne() {
-        assertEquals(1, MatchResult(true, listOf("Republic"), 1.0).required)
+    fun coverageReportsNoConfidenceBand() {
+        // Naming every answer says nothing about spelling, so a band would overstate the measurement.
+        val complete = MatchResult(true, listOf("Liberty", "Equality"), 1.0, 2, ScoreKind.COVERAGE)
+        assertNull(complete.confidence)
+        assertFalse(complete.nearMiss)
+
+        val partial = MatchResult(false, listOf("Liberty"), 0.5, 2, ScoreKind.COVERAGE)
+        assertNull(partial.confidence)
+    }
+
+    @Test
+    fun coverageNearMissMeansOneAnswerShort() {
+        fun coverage(matched: Int, required: Int) = MatchResult(
+            correct = matched >= required,
+            matchedAnswers = List(matched) { "answer $it" },
+            similarity = matched.toDouble() / required,
+            required = required,
+            scoreKind = ScoreKind.COVERAGE,
+        )
+
+        assertTrue(coverage(2, 3).nearMiss)
+        assertTrue(coverage(1, 2).nearMiss)
+        // Two or more short is not close, and a complete answer is not a miss.
+        assertFalse(coverage(1, 3).nearMiss)
+        assertFalse(coverage(0, 2).nearMiss)
+        assertFalse(coverage(3, 3).nearMiss)
     }
 }

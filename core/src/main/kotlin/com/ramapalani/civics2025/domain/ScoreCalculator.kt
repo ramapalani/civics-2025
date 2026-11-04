@@ -37,6 +37,7 @@ object ScoreCalculator {
             similarity = match.similarity,
             confidence = match.confidence,
             required = match.required,
+            scoreKind = match.scoreKind,
         )
     }
 

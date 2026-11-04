@@ -128,7 +128,12 @@ object AnswerMatcher {
     ): MatchResult {
         val accepted = acceptedFor(question, officials)
         if (userInput.isBlank()) {
-            return MatchResult(false, emptyList(), 0.0)
+            // Keep the score's meaning tied to the question, not to how the answer failed.
+            return when (question.kind) {
+                AnswerKind.ANY_ONE -> MatchResult(false, emptyList(), 0.0)
+                AnswerKind.ALL_N ->
+                    MatchResult(false, emptyList(), 0.0, question.minRequired, ScoreKind.COVERAGE)
+            }
         }
 
         return when (question.kind) {
@@ -193,10 +198,10 @@ object AnswerMatcher {
         val matched = uniqueFamilies(fromParts + fromBag)
         val correct = matched.size >= minRequired
         // Report real coverage ("2 of 3") rather than a flat pass/fail, so a partial answer is visible.
-        val similarity = if (minRequired <= 0) 0.0 else {
+        val coverage = if (minRequired <= 0) 0.0 else {
             (matched.size.toDouble() / minRequired).coerceAtMost(1.0)
         }
-        return MatchResult(correct, matched, similarity, minRequired)
+        return MatchResult(correct, matched, coverage, minRequired, ScoreKind.COVERAGE)
     }
 
     private fun collectMatches(accepted: List<String>, parts: List<String>): List<String> {

@@ -3,6 +3,7 @@ package com.ramapalani.civics2025.domain
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
+import kotlin.test.assertNull
 import kotlin.test.assertTrue
 
 class ScoreCalculatorTest {
@@ -86,10 +87,17 @@ class ScoreCalculatorTest {
         assertEquals(1, partial.matchedAnswers.size)
         assertEquals(2, partial.required)
         assertEquals(50, partial.confidencePercent)
+        // The score is coverage, so it carries no claim about wording.
+        assertEquals(ScoreKind.COVERAGE, partial.scoreKind)
+        assertNull(partial.confidence)
+        // One short of the two needed is worth a nudge rather than a flat no.
+        assertTrue(partial.nearMiss)
 
         val full = ScoreCalculator.grade(question, AnswerPath.TYPED, "liberty and equality", LocalOfficials())
         assertTrue(full.correct)
         assertEquals(100, full.confidencePercent)
+        assertNull(full.confidence)
+        assertFalse(full.nearMiss)
     }
 
     @Test
