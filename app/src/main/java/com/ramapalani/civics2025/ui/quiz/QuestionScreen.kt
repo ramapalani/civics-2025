@@ -143,8 +143,21 @@ fun QuestionScreen(
                                 modifier = Modifier.testTag("nearMissHint"),
                             )
                         }
-                        Text("Accepted answers", fontWeight = FontWeight.SemiBold)
-                        viewModel.acceptedAnswers().forEach { Text("• $it") }
+                        val sections = viewModel.answerSections()
+                        if (sections.accepted.isNotEmpty()) {
+                            Text("Accepted answers", fontWeight = FontWeight.SemiBold)
+                            sections.accepted.forEach { Text("• $it") }
+                        }
+                        if (sections.official.isNotEmpty()) {
+                            Text("Official answers (USCIS)", fontWeight = FontWeight.SemiBold)
+                            sections.official.forEach { Text("• $it") }
+                        }
+                        if (sections.other.isNotEmpty()) {
+                            Text("Also accepted", fontWeight = FontWeight.SemiBold)
+                            sections.other.forEach {
+                                Text("• $it", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                            }
+                        }
                         Text("Why this matters", fontWeight = FontWeight.SemiBold)
                         Text(question.extraInfo)
                         OutlinedButton(

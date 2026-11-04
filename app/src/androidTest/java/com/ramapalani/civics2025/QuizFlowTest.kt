@@ -6,6 +6,7 @@ import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTextInput
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.junit.Rule
@@ -75,6 +76,26 @@ class QuizFlowTest {
         composeRule.onNodeWithTag("gradeResult").assertTextContains("0% match", substring = true)
         // Nothing about "pizza" is close, so the card must not soften the verdict with a nudge.
         composeRule.onNodeWithTag("nearMissHint").assertDoesNotExist()
+    }
+
+    /**
+     * After grading, the result card must keep the USCIS-published answers apart from the extra
+     * variants the matcher also accepts. Learn mode starts at Q1 on a fresh install, which has
+     * both: "Republic" is official, "Federal republic" is an extra.
+     */
+    @Test
+    fun learnMode_afterGrading_separatesOfficialFromOtherAcceptedAnswers() {
+        composeRule.onNodeWithTag("learnModeButton").performClick()
+        composeRule.onNodeWithTag("answerInput").performTextInput("test answer")
+        composeRule.onNodeWithTag("checkButton").performClick()
+
+        composeRule.onNodeWithText("Official answers (USCIS)").performScrollTo().assertIsDisplayed()
+        composeRule.onNodeWithText("• Republic").performScrollTo().assertIsDisplayed()
+        composeRule.onNodeWithText("Also accepted").performScrollTo().assertIsDisplayed()
+        composeRule.onNodeWithText("• Federal republic").performScrollTo().assertIsDisplayed()
+
+        // Q1 has a fixed official list, so the combined single-list heading must not appear.
+        composeRule.onNodeWithText("Accepted answers").assertDoesNotExist()
     }
 
     /**
